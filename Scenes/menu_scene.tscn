@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgnxjcjethfkd"]
+
+[ext_resource type="Texture2D" uid="uid://dnt44pndu1dwd" path="res://assets/images/Galician_Background.jpg" id="1_kt0tg"]
+[ext_resource type="Script" uid="uid://b27viskynusk0" path="res://Scripts/LoadSceneOnPress.gd" id="2_s0fe0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_w4cdh"]
+font_size = 70
+
+[node name="MenuScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="TextureRect" parent="CanvasLayer"]
+offset_left = -8.0
+offset_top = -270.0
+offset_right = 1190.0
+offset_bottom = 649.0
+scale = Vector2(1, 1.00219)
+texture = ExtResource("1_kt0tg")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Quit" type="Button" parent="CanvasLayer"]
+offset_left = 467.0
+offset_top = 459.0
+offset_right = 694.0
+offset_bottom = 539.0
+text = "Quit"
+script = ExtResource("2_s0fe0")
+
+[node name="Start" type="Button" parent="CanvasLayer"]
+offset_left = 467.0
+offset_top = 352.0
+offset_right = 695.0
+offset_bottom = 431.0
+text = "Start"
+script = ExtResource("2_s0fe0")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 312.0
+offset_top = 144.0
+offset_right = 863.0
+offset_bottom = 240.0
+text = "POLBO XIGANTE"
+label_settings = SubResource("LabelSettings_w4cdh")
+
+[connection signal="pressed" from="CanvasLayer/Quit" to="CanvasLayer/Quit" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Start" to="CanvasLayer/Start" method="_on_pressed"]
