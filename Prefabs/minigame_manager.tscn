@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://ccp0t8scjreyd"]
+[gd_scene load_steps=7 format=3 uid="uid://ccp0t8scjreyd"]
 
 [ext_resource type="Shader" uid="uid://ddxgjcn15adry" path="res://Shaders/transition.gdshader" id="1_d8b51"]
+[ext_resource type="Script" uid="uid://cqvt5un8m8hvp" path="res://Scripts/MinigameManager.gd" id="1_wqwhv"]
 [ext_resource type="Texture2D" uid="uid://cjgwxc45vn007" path="res://Sprites/mask.png" id="2_wqwhv"]
 [ext_resource type="PackedScene" uid="uid://b3oka26upbeaw" path="res://Prefabs/transition_elems.tscn" id="3_d8b51"]
 
@@ -30,7 +31,9 @@ shader_parameter/progress_bias = Vector2(0, 0)
 [sub_resource type="ViewportTexture" id="ViewportTexture_wqwhv"]
 viewport_path = NodePath("SubViewport")
 
-[node name="MinigameManager" type="Node2D"]
+[node name="MinigameManager" type="Node2D" node_paths=PackedStringArray("transition_elems")]
+script = ExtResource("1_wqwhv")
+transition_elems = NodePath("SubViewport/TransitionElems")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

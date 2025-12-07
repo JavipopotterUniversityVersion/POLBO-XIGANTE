@@ -1,14 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3oka26upbeaw"]
+[gd_scene load_steps=3 format=3 uid="uid://b3oka26upbeaw"]
 
 [ext_resource type="Texture2D" uid="uid://dfncfv4f8u5ce" path="res://Sprites/icon.svg" id="1_0vdsl"]
+[ext_resource type="Script" uid="uid://bidh7kv51pggd" path="res://Scripts/TransitionElems.gd" id="1_wv2l7"]
 
-[node name="TransitionElems" type="Control"]
+[node name="TransitionElems" type="Control" node_paths=PackedStringArray("animation")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_wv2l7")
+animation = NodePath("animation")
 
 [node name="background" type="Panel" parent="."]
 layout_mode = 1
