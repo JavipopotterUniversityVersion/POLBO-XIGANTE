@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://w8wnlla7n40f"]
+[gd_scene load_steps=3 format=3 uid="uid://c8epa6iuolmnj"]
 
 [ext_resource type="Script" uid="uid://d0daruy3r65sd" path="res://Scripts/Minigame.gd" id="1_pbjnc"]
-[ext_resource type="Script" uid="uid://deq3pqhyfqwj2" path="res://Scripts/MinigameTimer.gd" id="2_k8gyt"]
+[ext_resource type="Script" path="res://Scripts/MinigameTimer.gd" id="2_k8gyt"]
 
 [node name="click_minigame" type="Node2D"]
 script = ExtResource("1_pbjnc")
@@ -42,3 +42,4 @@ show_percentage = false
 script = ExtResource("2_k8gyt")
 
 [connection signal="button_down" from="canvas_layer/control/button" to="." method="completed"]
+[connection signal="timeout" from="canvas_layer/control/timer" to="." method="completed"]
