@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cgnxjcjethfkd"]
 
-[ext_resource type="Texture2D" uid="uid://dnt44pndu1dwd" path="res://assets/images/Galician_Background.jpg" id="1_kt0tg"]
-[ext_resource type="Script" uid="uid://b27viskynusk0" path="res://Scripts/LoadSceneOnPress.gd" id="2_s0fe0"]
+[ext_resource type="Texture2D" uid="uid://dnt44pndu1dwd" path="res://assets/sprites/Galician_Background.jpg" id="1_kt0tg"]
+[ext_resource type="Script" path="res://Scripts/LoadSceneOnPress.gd" id="2_s0fe0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_w4cdh"]
 font_size = 70

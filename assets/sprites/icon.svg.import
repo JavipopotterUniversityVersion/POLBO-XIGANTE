@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnt44pndu1dwd"
-path="res://.godot/imported/Galician_Background.jpg-2f71dfb25076737c4bc59f4363c64bd8.ctex"
+uid="uid://dfncfv4f8u5ce"
+path="res://.godot/imported/icon.svg-00a55f41757400f7387d4069be498893.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Galician_Background.jpg"
-dest_files=["res://.godot/imported/Galician_Background.jpg-2f71dfb25076737c4bc59f4363c64bd8.ctex"]
+source_file="res://assets/sprites/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-00a55f41757400f7387d4069be498893.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

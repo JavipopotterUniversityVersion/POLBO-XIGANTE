@@ -2,7 +2,7 @@
 
 [ext_resource type="Shader" uid="uid://ddxgjcn15adry" path="res://Shaders/transition.gdshader" id="1_d8b51"]
 [ext_resource type="Script" uid="uid://cqvt5un8m8hvp" path="res://Scripts/MinigameManager.gd" id="1_wqwhv"]
-[ext_resource type="Texture2D" uid="uid://cjgwxc45vn007" path="res://Sprites/mask.png" id="2_wqwhv"]
+[ext_resource type="Texture2D" uid="uid://cjgwxc45vn007" path="res://assets/sprites/mask.png" id="2_wqwhv"]
 [ext_resource type="PackedScene" uid="uid://b3oka26upbeaw" path="res://Prefabs/transition_elems.tscn" id="3_d8b51"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d8b51"]

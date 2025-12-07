@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtcrggrkee5tb"
-path="res://.godot/imported/night.jpg-0076cf9999c9207d4b4ef77f6c43016d.ctex"
+uid="uid://cjgwxc45vn007"
+path="res://.godot/imported/mask.png-9cf00e4047ade98832df331f4f2fdcce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/night.jpg"
-dest_files=["res://.godot/imported/night.jpg-0076cf9999c9207d4b4ef77f6c43016d.ctex"]
+source_file="res://assets/sprites/mask.png"
+dest_files=["res://.godot/imported/mask.png-9cf00e4047ade98832df331f4f2fdcce.ctex"]
 
 [params]
 

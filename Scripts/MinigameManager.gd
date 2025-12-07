@@ -28,6 +28,7 @@ func start():
 			if not minigame.has_won():
 				lives.substract_live()
 			
+			transition_elems.animate()
 			await get_tree().create_timer(transition_time).timeout
 		accelerate()
 	win()
