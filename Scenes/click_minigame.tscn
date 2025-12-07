@@ -42,4 +42,4 @@ show_percentage = false
 script = ExtResource("2_k8gyt")
 
 [connection signal="button_down" from="canvas_layer/control/button" to="." method="completed"]
-[connection signal="timeout" from="canvas_layer/control/timer" to="." method="completed"]
+[connection signal="timeout" from="canvas_layer/control/timer" to="." method="finished"]
