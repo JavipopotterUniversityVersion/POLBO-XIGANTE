@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsr0omgo8s8cy"
-path="res://.godot/imported/Spyke.jpg-3bc846d7709d2ce677c61b9f564d2a90.ctex"
+path="res://.godot/imported/Spyke.jpg-e1fe89859d79deb7721981f62f2d2ca7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Spyke.jpg"
-dest_files=["res://.godot/imported/Spyke.jpg-3bc846d7709d2ce677c61b9f564d2a90.ctex"]
+source_file="res://assets/sprites/Spyke.jpg"
+dest_files=["res://.godot/imported/Spyke.jpg-e1fe89859d79deb7721981f62f2d2ca7.ctex"]
 
 [params]
 

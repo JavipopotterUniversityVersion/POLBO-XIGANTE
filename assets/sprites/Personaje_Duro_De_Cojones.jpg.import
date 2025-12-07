@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tyjgrqqs47ot"
-path="res://.godot/imported/Personaje_Duro_De_Cojones.jpg-970f6150cc64e40c4f35c4b173ffe939.ctex"
+path="res://.godot/imported/Personaje_Duro_De_Cojones.jpg-8736b46fa1ccabc5e6727cd1afd5cede.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Personaje_Duro_De_Cojones.jpg"
-dest_files=["res://.godot/imported/Personaje_Duro_De_Cojones.jpg-970f6150cc64e40c4f35c4b173ffe939.ctex"]
+source_file="res://assets/sprites/Personaje_Duro_De_Cojones.jpg"
+dest_files=["res://.godot/imported/Personaje_Duro_De_Cojones.jpg-8736b46fa1ccabc5e6727cd1afd5cede.ctex"]
 
 [params]
 
