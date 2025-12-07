@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://ccp0t8scjreyd"]
 
 [ext_resource type="Shader" uid="uid://ddxgjcn15adry" path="res://Shaders/transition.gdshader" id="1_d8b51"]
-[ext_resource type="Texture2D" uid="uid://dfncfv4f8u5ce" path="res://Sprites/icon.svg" id="1_s37qk"]
 [ext_resource type="Texture2D" uid="uid://cjgwxc45vn007" path="res://Sprites/mask.png" id="2_wqwhv"]
+[ext_resource type="PackedScene" uid="uid://b3oka26upbeaw" path="res://Prefabs/transition_elems.tscn" id="3_d8b51"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d8b51"]
 shader = ExtResource("1_d8b51")
@@ -32,8 +32,6 @@ viewport_path = NodePath("SubViewport")
 
 [node name="MinigameManager" type="Node2D"]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Render" type="Control" parent="CanvasLayer"]
@@ -57,34 +55,4 @@ texture = SubResource("ViewportTexture_wqwhv")
 [node name="SubViewport" type="SubViewport" parent="."]
 size = Vector2i(1142, 648)
 
-[node name="TransitionElems" type="Control" parent="SubViewport"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Panel" type="Panel" parent="SubViewport/TransitionElems"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="SubViewport/TransitionElems/Panel"]
-layout_mode = 0
-offset_left = 449.0
-offset_top = 206.0
-offset_right = 577.0
-offset_bottom = 334.0
-texture = ExtResource("1_s37qk")
-
-[node name="TextureRect2" type="TextureRect" parent="SubViewport/TransitionElems/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="TransitionElems" parent="SubViewport" instance=ExtResource("3_d8b51")]
