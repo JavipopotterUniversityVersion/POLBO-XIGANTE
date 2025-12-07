@@ -9,16 +9,26 @@ var available_games:Array[PackedScene]
 
 var speed:float = 1
 const MAX_SPEED := 1.75
+const transition_time := 2
 
 func start():
 	available_games = all_minigames
+	transition_elems.start()
+	
+	await get_tree().create_timer(transition_time).timeout
+	
 	while speed < MAX_SPEED:
 		while available_games.size() > 0:
 			var minigame:Minigame = spawn_random_game()
+			
+			transition_elems.fade()
 			await minigame.on_finished
+			transition_elems.unfade()
 			
 			if not minigame.has_won():
 				lives.substract_live()
+			
+			await get_tree().create_timer(transition_time).timeout
 		accelerate()
 	win()
 
