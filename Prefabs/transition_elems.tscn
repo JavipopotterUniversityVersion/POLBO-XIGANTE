@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b3oka26upbeaw"]
 
-[ext_resource type="Texture2D" uid="uid://dfncfv4f8u5ce" path="res://Sprites/icon.svg" id="1_0vdsl"]
 [ext_resource type="Script" uid="uid://bidh7kv51pggd" path="res://Scripts/TransitionElems.gd" id="1_wv2l7"]
+[ext_resource type="PackedScene" uid="uid://dc873ajjj0nyd" path="res://Prefabs/lives_display.tscn" id="2_wv2l7"]
 
 [node name="TransitionElems" type="Control" node_paths=PackedStringArray("animation")]
 layout_mode = 3
@@ -21,20 +21,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="background"]
-layout_mode = 0
-offset_left = 449.0
-offset_top = 206.0
-offset_right = 577.0
-offset_bottom = 334.0
-texture = ExtResource("1_0vdsl")
+[node name="animation" type="AnimationPlayer" parent="."]
 
-[node name="TextureRect2" type="TextureRect" parent="background"]
+[node name="lives_display" parent="." node_paths=PackedStringArray("anims") instance=ExtResource("2_wv2l7")]
 layout_mode = 1
 anchors_preset = 15
-anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
+offset_left = 93.0
+offset_top = 43.0
+offset_right = -76.0
+offset_bottom = -74.0
 grow_vertical = 2
-
-[node name="animation" type="AnimationPlayer" parent="."]
+anims = [NodePath("live/AnimationPlayer"), null, null]

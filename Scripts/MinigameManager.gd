@@ -2,6 +2,7 @@ extends Node
 class_name MinigameManager
 
 @export var transition_elems:TransitionElems
+@export var lives:Lives
 
 @export var all_minigames:Array[PackedScene]
 var available_games:Array[PackedScene]
@@ -15,6 +16,9 @@ func start():
 		while available_games.size() > 0:
 			var minigame:Minigame = spawn_random_game()
 			await minigame.on_finished
+			
+			if not minigame.has_won():
+				lives.substract_live()
 		accelerate()
 	win()
 

@@ -24,3 +24,7 @@ HitStopManager="*res://Scripts/HitStopManager.gd"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/scene_manager/plugin.cfg")
+
+[global_group]
+
+Lives=""

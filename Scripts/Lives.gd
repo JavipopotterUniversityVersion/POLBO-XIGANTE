@@ -1,9 +1,11 @@
 extends Node
+class_name Lives
 
 @export var init_lives:int = 3
 var current_lives:int = init_lives
 
 signal no_lives_left
+signal on_lives_changed
 
 func add_lives(lives:int):
 	current_lives += lives
@@ -27,7 +29,7 @@ func reset_lives():
 
 # Updates everything that needs to be updated when lives change
 func update_lives():
-	
+	on_lives_changed.emit(current_lives)
 	if(current_lives <= 0):
 		no_lives_left.emit()
 		# SceneManager.change_scene([lose_scene_path]) 
