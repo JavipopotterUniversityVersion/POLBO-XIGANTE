@@ -1,9 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccp0t8scjreyd"]
+[gd_scene format=3 uid="uid://ccp0t8scjreyd"]
 
-[ext_resource type="Script" uid="uid://cqvt5un8m8hvp" path="res://Scripts/MinigameManager.gd" id="1_s37qk"]
-
-[node name="MinigameManager" type="Node"]
-script = ExtResource("1_s37qk")
-metadata/_custom_type_script = "uid://cqvt5un8m8hvp"
+[node name="MinigameManager" type="Node2D"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
