@@ -1,6 +1,6 @@
 extends Control
 
-@export var anims:Array[AnimationPlayer]
+@export var sprites:Array[CanvasItem]
 
 func _ready() -> void:
 	await get_tree().create_timer(0.2).timeout
@@ -8,5 +8,4 @@ func _ready() -> void:
 	lives.on_lives_changed.connect(update_display)
 
 func update_display(value:int):
-	pass
-	#anims[value].play(&"FALL")
+	sprites[value].visible = false
