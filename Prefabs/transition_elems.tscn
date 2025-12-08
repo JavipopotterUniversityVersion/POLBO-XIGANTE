@@ -22,7 +22,7 @@ grow_vertical = 2
 
 [node name="animation" type="AnimationPlayer" parent="."]
 
-[node name="lives_display" parent="." node_paths=PackedStringArray("anims") instance=ExtResource("2_wv2l7")]
+[node name="lives_display" parent="." instance=ExtResource("2_wv2l7")]
 layout_mode = 1
 anchors_preset = 15
 anchor_bottom = 1.0
@@ -31,4 +31,3 @@ offset_top = 43.0
 offset_right = -76.0
 offset_bottom = -74.0
 grow_vertical = 2
-anims = [NodePath("live/AnimationPlayer"), null, null]

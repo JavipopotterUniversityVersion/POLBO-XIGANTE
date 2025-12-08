@@ -1,11 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://w8wnlla7n40f"]
 
 [ext_resource type="Script" uid="uid://d0daruy3r65sd" path="res://Scripts/Minigame.gd" id="1_pbjnc"]
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://b31ya55b7ttxa" path="res://Prefabs/timer.tscn" id="2_k8gyt"]
-=======
 [ext_resource type="Script" uid="uid://deq3pqhyfqwj2" path="res://Scripts/MinigameTimer.gd" id="2_k8gyt"]
->>>>>>> 91301d1 (Comprobando commit de Javi)
 
 [node name="click_minigame" type="Node2D"]
 script = ExtResource("1_pbjnc")
