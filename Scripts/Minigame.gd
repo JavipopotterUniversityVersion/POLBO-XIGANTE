@@ -7,7 +7,7 @@ signal on_finished
 func finished():
 	on_finished.emit()
 
-func completed():
+func succed():
 	success = true
 
 func has_won() -> bool:
