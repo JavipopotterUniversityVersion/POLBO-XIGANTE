@@ -11,6 +11,7 @@ script = ExtResource("1_netmy")
 [node name="canvas_layer" type="CanvasLayer" parent="."]
 
 [node name="octopus_costume_limb" parent="canvas_layer" instance=ExtResource("2_o3arj")]
+position = Vector2(-20, 40)
 
 [node name="MinigameArea" parent="canvas_layer" instance=ExtResource("3_yn83y")]
 position = Vector2(359, 315)
@@ -33,5 +34,8 @@ offset_bottom = 625.0
 max_value = 1.0
 show_percentage = false
 script = ExtResource("2_netmy")
+
+[node name="octopus_costume_limb2" parent="canvas_layer" instance=ExtResource("2_o3arj")]
+position = Vector2(227, 113)
 
 [connection signal="timeout" from="canvas_layer/control/timer" to="." method="finished"]
