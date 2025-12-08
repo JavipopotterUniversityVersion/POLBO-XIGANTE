@@ -1,6 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://tigixn6xylsa"]
+[gd_scene load_steps=3 format=3 uid="uid://tigixn6xylsa"]
 
 [ext_resource type="Script" uid="uid://d0daruy3r65sd" path="res://Scripts/Minigame.gd" id="1_bm5vv"]
+[ext_resource type="Script" uid="uid://deq3pqhyfqwj2" path="res://Scripts/MinigameTimer.gd" id="2_nkf4n"]
 
 [node name="StrangleMinigame" type="Node2D"]
 script = ExtResource("1_bm5vv")
+
+[node name="canvas_layer" type="CanvasLayer" parent="."]
+
+[node name="control" type="Control" parent="canvas_layer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="timer" type="ProgressBar" parent="canvas_layer/control"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 598.0
+offset_right = 1124.0
+offset_bottom = 625.0
+max_value = 1.0
+show_percentage = false
+script = ExtResource("2_nkf4n")
+
+[connection signal="timeout" from="canvas_layer/control/timer" to="." method="finished"]
