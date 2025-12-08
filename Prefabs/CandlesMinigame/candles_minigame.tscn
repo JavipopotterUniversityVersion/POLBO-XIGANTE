@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0ya6sol0b1hh"]
+
+[ext_resource type="Script" uid="uid://b2746cpp60fjp" path="res://Scripts/candles_minigame.gd" id="1_hqba4"]
+[ext_resource type="PackedScene" uid="uid://cax7b2a2eexo7" path="res://Prefabs/CandlesMinigame/candle.tscn" id="1_u1wo2"]
+[ext_resource type="PackedScene" uid="uid://b31ya55b7ttxa" path="res://Prefabs/timer.tscn" id="3_whn5p"]
+
+[node name="CandlesMinigame" type="Node2D" node_paths=PackedStringArray("candle_nodes")]
+script = ExtResource("1_hqba4")
+candle_nodes = [NodePath("candle"), NodePath("candle2"), NodePath("candle3"), NodePath("candle4"), NodePath("candle5"), NodePath("candle7")]
+
+[node name="candle" parent="." instance=ExtResource("1_u1wo2")]
+position = Vector2(-45, 110)
+
+[node name="candle2" parent="." instance=ExtResource("1_u1wo2")]
+position = Vector2(-118, 28)
+
+[node name="candle3" parent="." instance=ExtResource("1_u1wo2")]
+position = Vector2(53, 113)
+
+[node name="candle4" parent="." instance=ExtResource("1_u1wo2")]
+position = Vector2(-49, -72)
+
+[node name="candle5" parent="." instance=ExtResource("1_u1wo2")]
+position = Vector2(54, -75)
+
+[node name="candle7" parent="." instance=ExtResource("1_u1wo2")]
+position = Vector2(117, 14)
+
+[node name="canvas_layer" type="CanvasLayer" parent="."]
+
+[node name="control" type="Control" parent="canvas_layer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="timer" parent="canvas_layer/control" instance=ExtResource("3_whn5p")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -563.0
+offset_top = -43.0
+offset_right = 563.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[connection signal="timeout" from="canvas_layer/control/timer" to="." method="finished"]

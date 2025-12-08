@@ -1,0 +1,106 @@
+[gd_scene load_steps=19 format=3 uid="uid://cax7b2a2eexo7"]
+
+[ext_resource type="Script" uid="uid://dna716qi7al51" path="res://Scripts/candle_trigger.gd" id="1_ev1a0"]
+[ext_resource type="Texture2D" uid="uid://ckha3b42xhtlm" path="res://assets/sprites/particles/fire.png" id="1_uxagb"]
+[ext_resource type="Texture2D" uid="uid://caxsfxrtkuabd" path="res://assets/sprites/particles/smoke.png" id="2_dllh6"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_4ogdy"]
+
+[sub_resource type="Curve" id="Curve_dllh6"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_41m2d"]
+curve = SubResource("Curve_dllh6")
+
+[sub_resource type="Gradient" id="Gradient_c10ek"]
+offsets = PackedFloat32Array(0, 0.464407)
+colors = PackedColorArray(1, 1, 0, 1, 0.992157, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2qptt"]
+gradient = SubResource("Gradient_c10ek")
+
+[sub_resource type="Curve" id="Curve_okxc0"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.461059, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_awhrj"]
+curve = SubResource("Curve_okxc0")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gekfi"]
+resource_local_to_scene = true
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 30.0
+initial_velocity_min = 22.28
+initial_velocity_max = 22.28
+gravity = Vector3(0, -98, 0)
+scale_min = 0.3
+scale_max = 0.5
+color_ramp = SubResource("GradientTexture1D_2qptt")
+alpha_curve = SubResource("CurveTexture_41m2d")
+emission_curve = SubResource("CurveTexture_awhrj")
+
+[sub_resource type="Curve" id="Curve_41m2d"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_c10ek"]
+curve = SubResource("Curve_41m2d")
+
+[sub_resource type="Gradient" id="Gradient_2qptt"]
+colors = PackedColorArray(0.396889, 0.396889, 0.396889, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_okxc0"]
+gradient = SubResource("Gradient_2qptt")
+
+[sub_resource type="Curve" id="Curve_awhrj"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.461059, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_gekfi"]
+curve = SubResource("Curve_awhrj")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3q61o"]
+resource_local_to_scene = true
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 30.0
+initial_velocity_min = 22.28
+initial_velocity_max = 22.28
+gravity = Vector3(0, -98, 0)
+scale_min = 0.3
+scale_max = 0.5
+color_ramp = SubResource("GradientTexture1D_okxc0")
+alpha_curve = SubResource("CurveTexture_c10ek")
+emission_curve = SubResource("CurveTexture_gekfi")
+
+[node name="candle" type="Node2D"]
+
+[node name="sr" type="Sprite2D" parent="."]
+scale = Vector2(18, 114)
+texture = SubResource("PlaceholderTexture2D_4ogdy")
+
+[node name="fire" type="GPUParticles2D" parent="."]
+position = Vector2(0, -64)
+amount = 16
+texture = ExtResource("1_uxagb")
+process_material = SubResource("ParticleProcessMaterial_gekfi")
+
+[node name="smoke" type="GPUParticles2D" parent="."]
+position = Vector2(0, -64)
+amount = 4
+amount_ratio = 0.0
+texture = ExtResource("2_dllh6")
+process_material = SubResource("ParticleProcessMaterial_3q61o")
+
+[node name="trigger" type="Button" parent="." node_paths=PackedStringArray("fire", "smoke")]
+modulate = Color(1, 1, 1, 0)
+offset_left = -23.0
+offset_top = -92.0
+offset_right = 25.0
+offset_bottom = -42.0
+text = "X"
+script = ExtResource("1_ev1a0")
+fire = NodePath("../fire")
+smoke = NodePath("../smoke")

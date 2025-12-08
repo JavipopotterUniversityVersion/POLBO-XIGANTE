@@ -1,32 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://ccp0t8scjreyd"]
+[gd_scene load_steps=8 format=3 uid="uid://ccp0t8scjreyd"]
 
-[ext_resource type="Shader" uid="uid://ddxgjcn15adry" path="res://Shaders/transition.gdshader" id="1_d8b51"]
 [ext_resource type="Script" uid="uid://cqvt5un8m8hvp" path="res://Scripts/MinigameManager.gd" id="1_wqwhv"]
-[ext_resource type="Texture2D" uid="uid://cjgwxc45vn007" path="res://assets/sprites/mask.png" id="2_wqwhv"]
+[ext_resource type="PackedScene" uid="uid://w8wnlla7n40f" path="res://Scenes/click_minigame.tscn" id="2_4l6x5"]
+[ext_resource type="Material" uid="uid://c03kju2yodtu0" path="res://Materials/transition_mat.tres" id="2_d8b51"]
 [ext_resource type="PackedScene" uid="uid://b3oka26upbeaw" path="res://Prefabs/transition_elems.tscn" id="3_d8b51"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_d8b51"]
-shader = ExtResource("1_d8b51")
-shader_parameter/use_sprite_alpha = true
-shader_parameter/use_transition_texture = false
-shader_parameter/transition_type = 1
-shader_parameter/position = Vector2(0.49, 0.425)
-shader_parameter/invert = false
-shader_parameter/grid_size = Vector2(1, 1)
-shader_parameter/rotation_angle = 0.0
-shader_parameter/stagger = Vector2(0, 0)
-shader_parameter/stagger_frequency = Vector2i(2, 2)
-shader_parameter/flip_frequency = Vector2i(1, 1)
-shader_parameter/basic_feather = 0.0
-shader_parameter/mask_texture = ExtResource("2_wqwhv")
-shader_parameter/use_mask_size = true
-shader_parameter/mask_size = Vector2(100, 100)
-shader_parameter/edges = 6
-shader_parameter/shape_feather = 0.1
-shader_parameter/sectors = 1
-shader_parameter/clock_feather = 0.0
-shader_parameter/progress = 0.0
-shader_parameter/progress_bias = Vector2(0, 0)
+[ext_resource type="Script" uid="uid://dvi2w1q51bxfk" path="res://Scripts/transition_settings.gd" id="4_wqwhv"]
+[ext_resource type="Resource" uid="uid://dfr6hq1n7phuv" path="res://Resources/star_trans.tres" id="5_fq3ls"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_wqwhv"]
 viewport_path = NodePath("SubViewport")
@@ -34,6 +13,7 @@ viewport_path = NodePath("SubViewport")
 [node name="MinigameManager" type="Node2D" node_paths=PackedStringArray("transition_elems")]
 script = ExtResource("1_wqwhv")
 transition_elems = NodePath("SubViewport/TransitionElems")
+all_minigames = Array[PackedScene]([ExtResource("2_4l6x5")])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -44,18 +24,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Render"]
-material = SubResource("ShaderMaterial_d8b51")
+material = ExtResource("2_d8b51")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = SubResource("ViewportTexture_wqwhv")
 
 [node name="SubViewport" type="SubViewport" parent="."]
 size = Vector2i(1142, 648)
 
 [node name="TransitionElems" parent="SubViewport" instance=ExtResource("3_d8b51")]
+mouse_filter = 2
+trans_mat = ExtResource("2_d8b51")
+transition_settings = Array[ExtResource("4_wqwhv")]([ExtResource("5_fq3ls")])

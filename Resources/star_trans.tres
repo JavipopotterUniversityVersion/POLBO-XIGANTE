@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="TransitionSetting" load_steps=4 format=3 uid="uid://dfr6hq1n7phuv"]
+
+[ext_resource type="Curve" uid="uid://cltxln8jafdq1" path="res://Resources/simple_curve.tres" id="1_kclsd"]
+[ext_resource type="Script" uid="uid://dvi2w1q51bxfk" path="res://Scripts/transition_settings.gd" id="1_vryh4"]
+[ext_resource type="Texture2D" uid="uid://cjgwxc45vn007" path="res://assets/sprites/mask.png" id="3_cp5dq"]
+
+[resource]
+script = ExtResource("1_vryh4")
+trans_mask = ExtResource("3_cp5dq")
+start_pos = Vector2(0.54, 0.46)
+end_pos = Vector2(0.54, 0.46)
+pos_curve = ExtResource("1_kclsd")
+start_grid_size = Vector2(1, 1)
+end_grid_size = Vector2(1, 1)
+grid_curve = ExtResource("1_kclsd")
+start_angle = 0.0
+end_angle = 0.0
+rotation_curve = ExtResource("1_kclsd")
+metadata/_custom_type_script = "uid://dvi2w1q51bxfk"

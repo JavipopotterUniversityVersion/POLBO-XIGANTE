@@ -1,7 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://w8wnlla7n40f"]
 
 [ext_resource type="Script" uid="uid://d0daruy3r65sd" path="res://Scripts/Minigame.gd" id="1_pbjnc"]
+<<<<<<< HEAD
+[ext_resource type="PackedScene" uid="uid://b31ya55b7ttxa" path="res://Prefabs/timer.tscn" id="2_k8gyt"]
+=======
 [ext_resource type="Script" uid="uid://deq3pqhyfqwj2" path="res://Scripts/MinigameTimer.gd" id="2_k8gyt"]
+>>>>>>> 91301d1 (Comprobando commit de Javi)
 
 [node name="click_minigame" type="Node2D"]
 script = ExtResource("1_pbjnc")
@@ -15,7 +19,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="button" type="Button" parent="canvas_layer/control"]
 layout_mode = 1
@@ -31,18 +34,9 @@ offset_bottom = 122.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "PULSA!!!!!!"
-metadata/_edit_use_anchors_ = true
 
-[node name="timer" type="ProgressBar" parent="canvas_layer/control"]
+[node name="timer" parent="canvas_layer/control" instance=ExtResource("2_k8gyt")]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 598.0
-offset_right = 1124.0
-offset_bottom = 625.0
-max_value = 1.0
-show_percentage = false
-script = ExtResource("2_k8gyt")
-metadata/_edit_use_anchors_ = true
 
-[connection signal="button_down" from="canvas_layer/control/button" to="." method="completed"]
+[connection signal="button_down" from="canvas_layer/control/button" to="." method="succed"]
 [connection signal="timeout" from="canvas_layer/control/timer" to="." method="finished"]
