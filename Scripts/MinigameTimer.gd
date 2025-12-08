@@ -21,4 +21,4 @@ func _process(delta: float) -> void:
 	
 	if time_left <= 0:
 		timeout.emit()
-		print("signal emitted")
+		#print("signal emitted")

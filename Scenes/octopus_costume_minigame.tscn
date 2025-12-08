@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://d0daruy3r65sd" path="res://Scripts/Minigame.gd" id="1_f5dcy"]
 [ext_resource type="Script" uid="uid://deq3pqhyfqwj2" path="res://Scripts/MinigameTimer.gd" id="2_netmy"]
 [ext_resource type="Script" uid="uid://bh0iq4b3s3xld" path="res://Scenes/DiscreteDragToPosition.gd" id="3_o3arj"]
-[ext_resource type="Texture2D" uid="uid://bsr0omgo8s8cy" path="res://assets/images/Spyke.jpg" id="4_netmy"]
+[ext_resource type="Texture2D" uid="uid://bsr0omgo8s8cy" path="res://assets/sprites/Spyke.jpg" id="4_netmy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yn83y"]
 size = Vector2(69, 214)

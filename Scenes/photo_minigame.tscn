@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://d1bamuwdotu6f"]
+
+[ext_resource type="Script" uid="uid://clcddc1vfljob" path="res://Scripts/PhotoMinigame.gd" id="1_4gjhm"]
+[ext_resource type="Script" uid="uid://deq3pqhyfqwj2" path="res://Scripts/MinigameTimer.gd" id="2_o3c48"]
+[ext_resource type="Shader" uid="uid://d4n0dyr0ars7l" path="res://Shaders/dirt.gdshader" id="3_fangb"]
+[ext_resource type="Texture2D" uid="uid://dfncfv4f8u5ce" path="res://assets/sprites/icon.svg" id="4_o3c48"]
+[ext_resource type="Texture2D" uid="uid://bbvtgdx0l2gs2" path="res://assets/sprites/day.jpg" id="5_fangb"]
+[ext_resource type="Script" uid="uid://bamj0np6p248a" path="res://Scripts/PhotoClear.gd" id="6_fangb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nb63l"]
+shader = ExtResource("3_fangb")
+shader_parameter/clean_texture = ExtResource("4_o3c48")
+shader_parameter/dirty_texture = ExtResource("5_fangb")
+shader_parameter/dirt_strength = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_ajvxf"]
+subdivide_width = 21
+subdivide_depth = 21
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nb63l"]
+size = Vector2(1.06197, 1.02088)
+
+[node name="PhotoMinigame" type="Node2D"]
+script = ExtResource("1_4gjhm")
+
+[node name="canvas_layer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="control" type="Control" parent="canvas_layer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="timer" type="ProgressBar" parent="canvas_layer/control"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 598.0
+offset_right = 1124.0
+offset_bottom = 625.0
+max_value = 1.0
+show_percentage = false
+script = ExtResource("2_o3c48")
+metadata/_edit_use_anchors_ = true
+
+[node name="photo" type="MeshInstance2D" parent="."]
+material = SubResource("ShaderMaterial_nb63l")
+position = Vector2(573, 308.5)
+scale = Vector2(710, -479)
+mesh = SubResource("QuadMesh_ajvxf")
+texture = ExtResource("4_o3c48")
+script = ExtResource("6_fangb")
+
+[node name="Area2D" type="Area2D" parent="photo"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="photo/Area2D"]
+position = Vector2(-3.1665e-08, 0.00939457)
+shape = SubResource("RectangleShape2D_nb63l")
+
+[connection signal="texture_changed" from="photo" to="." method="finished"]
+[connection signal="visibility_changed" from="photo" to="." method="_on_photo_visibility_changed"]

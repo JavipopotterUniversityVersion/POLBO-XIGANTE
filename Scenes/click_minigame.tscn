@@ -15,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="button" type="Button" parent="canvas_layer/control"]
 layout_mode = 1
@@ -30,6 +31,7 @@ offset_bottom = 122.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "PULSA!!!!!!"
+metadata/_edit_use_anchors_ = true
 
 [node name="timer" type="ProgressBar" parent="canvas_layer/control"]
 layout_mode = 0
@@ -40,6 +42,7 @@ offset_bottom = 625.0
 max_value = 1.0
 show_percentage = false
 script = ExtResource("2_k8gyt")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="button_down" from="canvas_layer/control/button" to="." method="completed"]
 [connection signal="timeout" from="canvas_layer/control/timer" to="." method="finished"]
