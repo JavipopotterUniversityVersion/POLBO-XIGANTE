@@ -28,6 +28,7 @@ enabled=PackedStringArray("res://addons/scene_manager/plugin.cfg")
 [global_group]
 
 Lives=""
+DraggableArea=""
 
 [input]
 
