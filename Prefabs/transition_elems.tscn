@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bidh7kv51pggd" path="res://Scripts/TransitionElems.gd" id="1_wv2l7"]
 [ext_resource type="PackedScene" uid="uid://dc873ajjj0nyd" path="res://Prefabs/lives_display.tscn" id="2_wv2l7"]
 
-[node name="TransitionElems" type="Control" node_paths=PackedStringArray("animation")]
+[node name="TransitionElems" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,7 +11,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wv2l7")
-animation = NodePath("animation")
 
 [node name="background" type="Panel" parent="."]
 layout_mode = 1
