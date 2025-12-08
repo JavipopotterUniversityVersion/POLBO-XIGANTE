@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ccp0t8scjreyd" path="res://Prefabs/minigame_manager.tscn" id="1_x87qo"]
 [ext_resource type="PackedScene" uid="uid://w8wnlla7n40f" path="res://Scenes/click_minigame.tscn" id="2_6h5vk"]
 [ext_resource type="Script" uid="uid://cdrpbmhvc0s4j" path="res://Scripts/Lives.gd" id="2_b6fju"]
-[ext_resource type="PackedScene" uid="uid://c0ya6sol0b1hh" path="res://Prefabs/CandlesMinigame/candles_minigame.tscn" id="4_fiftr"]
+[ext_resource type="PackedScene" uid="uid://c0ya6sol0b1hh" path="res://Scenes/candles_minigame.tscn" id="4_fiftr"]
 [ext_resource type="PackedScene" uid="uid://xidq3nsyt43u" path="res://Scenes/octopus_costume_minigame.tscn" id="5_1ixah"]
 
 [sub_resource type="Environment" id="Environment_6h5vk"]
