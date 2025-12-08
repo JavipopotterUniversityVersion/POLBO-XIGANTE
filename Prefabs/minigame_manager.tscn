@@ -1,11 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://ccp0t8scjreyd"]
+[gd_scene load_steps=6 format=3 uid="uid://ccp0t8scjreyd"]
 
 [ext_resource type="Script" uid="uid://cqvt5un8m8hvp" path="res://Scripts/MinigameManager.gd" id="1_wqwhv"]
 [ext_resource type="PackedScene" uid="uid://w8wnlla7n40f" path="res://Scenes/click_minigame.tscn" id="2_4l6x5"]
 [ext_resource type="Material" uid="uid://c03kju2yodtu0" path="res://Materials/transition_mat.tres" id="2_d8b51"]
 [ext_resource type="PackedScene" uid="uid://b3oka26upbeaw" path="res://Prefabs/transition_elems.tscn" id="3_d8b51"]
-[ext_resource type="Script" uid="uid://dvi2w1q51bxfk" path="res://Scripts/transition_settings.gd" id="4_wqwhv"]
-[ext_resource type="Resource" uid="uid://dfr6hq1n7phuv" path="res://Resources/star_trans.tres" id="5_fq3ls"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_wqwhv"]
 viewport_path = NodePath("SubViewport")
@@ -38,9 +36,8 @@ mouse_filter = 2
 texture = SubResource("ViewportTexture_wqwhv")
 
 [node name="SubViewport" type="SubViewport" parent="."]
+canvas_item_default_texture_filter = 0
 size = Vector2i(1142, 648)
 
 [node name="TransitionElems" parent="SubViewport" instance=ExtResource("3_d8b51")]
 mouse_filter = 2
-trans_mat = ExtResource("2_d8b51")
-transition_settings = Array[ExtResource("4_wqwhv")]([ExtResource("5_fq3ls")])
