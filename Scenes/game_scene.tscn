@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://d6143uxlokxe"]
 
 [ext_resource type="PackedScene" uid="uid://ccp0t8scjreyd" path="res://Prefabs/minigame_manager.tscn" id="1_x87qo"]
-[ext_resource type="PackedScene" uid="uid://w8wnlla7n40f" path="res://Scenes/click_minigame.tscn" id="2_6h5vk"]
 [ext_resource type="Script" uid="uid://cdrpbmhvc0s4j" path="res://Scripts/Lives.gd" id="2_b6fju"]
 [ext_resource type="PackedScene" uid="uid://c0ya6sol0b1hh" path="res://Scenes/candles_minigame.tscn" id="4_fiftr"]
 [ext_resource type="PackedScene" uid="uid://xidq3nsyt43u" path="res://Scenes/octopus_costume_minigame.tscn" id="5_1ixah"]
+[ext_resource type="PackedScene" uid="uid://tigixn6xylsa" path="res://Scenes/strangle_minigame.tscn" id="6_rgj8m"]
 
 [sub_resource type="Environment" id="Environment_6h5vk"]
 
@@ -15,7 +15,7 @@ script = ExtResource("2_b6fju")
 metadata/_custom_type_script = "uid://cdrpbmhvc0s4j"
 
 [node name="MinigameManager" parent="." instance=ExtResource("1_x87qo")]
-all_minigames = Array[PackedScene]([ExtResource("2_6h5vk"), ExtResource("4_fiftr"), ExtResource("5_1ixah")])
+all_minigames = Array[PackedScene]([ExtResource("4_fiftr"), ExtResource("5_1ixah"), ExtResource("6_rgj8m")])
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6h5vk")

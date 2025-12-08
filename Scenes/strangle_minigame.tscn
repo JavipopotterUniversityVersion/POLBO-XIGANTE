@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://tigixn6xylsa"]
+[gd_scene load_steps=6 format=3 uid="uid://tigixn6xylsa"]
 
 [ext_resource type="Script" uid="uid://d0daruy3r65sd" path="res://Scripts/Minigame.gd" id="1_bm5vv"]
 [ext_resource type="Script" uid="uid://deq3pqhyfqwj2" path="res://Scripts/MinigameTimer.gd" id="2_nkf4n"]
+[ext_resource type="Script" uid="uid://dfe1y1whtbwf0" path="res://Scripts/tentacle.gd" id="2_upm5h"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_nkf4n"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_upm5h"]
 
 [node name="StrangleMinigame" type="Node2D"]
 script = ExtResource("1_bm5vv")
@@ -26,5 +31,32 @@ offset_bottom = 625.0
 max_value = 1.0
 show_percentage = false
 script = ExtResource("2_nkf4n")
+
+[node name="ProgressBar" type="ProgressBar" parent="canvas_layer/control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 124.0
+offset_top = 37.0
+offset_right = -124.0
+offset_bottom = 83.0
+grow_horizontal = 2
+
+[node name="tentacle" type="Sprite2D" parent="." node_paths=PackedStringArray("guy", "minigame", "progress_bar")]
+position = Vector2(16, 403)
+scale = Vector2(34, 393.5)
+texture = SubResource("PlaceholderTexture2D_nkf4n")
+offset = Vector2(0.0294118, -0.525413)
+script = ExtResource("2_upm5h")
+target_dist = 10000.0
+dist_loose = 1000.0
+guy = NodePath("guy")
+minigame = NodePath("..")
+progress_bar = NodePath("../canvas_layer/control/ProgressBar")
+
+[node name="guy" type="Sprite2D" parent="tentacle"]
+position = Vector2(-0.0882354, -1.04193)
+scale = Vector2(3.57353, 0.319597)
+texture = SubResource("PlaceholderTexture2D_upm5h")
 
 [connection signal="timeout" from="canvas_layer/control/timer" to="." method="finished"]
