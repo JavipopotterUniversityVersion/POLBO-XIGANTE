@@ -1,8 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://w8wnlla7n40f"]
+[gd_scene load_steps=2 format=3 uid="uid://w8wnlla7n40f"]
 
 [ext_resource type="Script" uid="uid://d0daruy3r65sd" path="res://Scripts/Minigame.gd" id="1_pbjnc"]
-[ext_resource type="PackedScene" uid="uid://b31ya55b7ttxa" path="res://Prefabs/timer.tscn" id="2_k8gyt"]
-[ext_resource type="Script" uid="uid://deq3pqhyfqwj2" path="res://Scripts/MinigameTimer.gd" id="2_k8gyt"]
 
 [node name="click_minigame" type="Node2D"]
 script = ExtResource("1_pbjnc")
@@ -32,8 +30,17 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "PULSA!!!!!!"
 
-[node name="timer" parent="canvas_layer/control" instance=ExtResource("2_k8gyt")]
+[node name="timer" parent="canvas_layer/control"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 layout_mode = 0
+script = null
 
 [connection signal="button_down" from="canvas_layer/control/button" to="." method="succed"]
-[connection signal="timeout" from="canvas_layer/control/timer" to="." method="finished"]
