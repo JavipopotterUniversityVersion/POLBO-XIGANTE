@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5gcm2l8uew4u"]
+[gd_scene load_steps=3 format=3 uid="uid://c5gcm2l8uew4u"]
 
 [ext_resource type="Script" uid="uid://bh0iq4b3s3xld" path="res://Scripts/DragToPosition.gd" id="1_xs6h4"]
-[ext_resource type="Texture2D" uid="uid://bsr0omgo8s8cy" path="res://assets/sprites/Spyke.jpg" id="2_ogu1y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yn83y"]
 size = Vector2(69, 214)
@@ -9,13 +8,7 @@ size = Vector2(69, 214)
 [node name="octopus_costume_limb" type="Area2D"]
 script = ExtResource("1_xs6h4")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(630, 300.5)
-scale = Vector2(0.0629629, 0.129687)
-texture = ExtResource("2_ogu1y")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(630.5, 300)
 scale = Vector2(1, 1.16)
 shape = SubResource("RectangleShape2D_yn83y")
 

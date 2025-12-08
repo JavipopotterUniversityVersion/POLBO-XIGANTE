@@ -1,19 +1,35 @@
-[gd_scene load_steps=5 format=3 uid="uid://xidq3nsyt43u"]
+[gd_scene load_steps=11 format=3 uid="uid://xidq3nsyt43u"]
 
 [ext_resource type="Script" uid="uid://p8ft1du3jieh" path="res://Scripts/CountingMinigame.gd" id="1_netmy"]
 [ext_resource type="Script" uid="uid://deq3pqhyfqwj2" path="res://Scripts/MinigameTimer.gd" id="2_netmy"]
 [ext_resource type="PackedScene" uid="uid://c5gcm2l8uew4u" path="res://Prefabs/octopus_costume_limb.tscn" id="2_o3arj"]
 [ext_resource type="PackedScene" uid="uid://dtbxmoay6hn7q" path="res://Prefabs/minigame_area.tscn" id="3_yn83y"]
+[ext_resource type="Texture2D" uid="uid://c6r0p166ytn5a" path="res://assets/sprites/octopus_minigame/brazo derecho.png" id="5_ets8c"]
+[ext_resource type="Texture2D" uid="uid://c62i6u7m0ov73" path="res://assets/sprites/octopus_minigame/pierna protesis izq.png" id="6_s2jm4"]
+[ext_resource type="Texture2D" uid="uid://h2718di54tpf" path="res://assets/sprites/octopus_minigame/pierna protesis derecha.png" id="7_30h1r"]
+[ext_resource type="Texture2D" uid="uid://dwgxd8032145x" path="res://assets/sprites/octopus_minigame/cabeza.png" id="8_88mxi"]
+[ext_resource type="Texture2D" uid="uid://ce7j1no5vbe3x" path="res://assets/sprites/octopus_minigame/brazo izquierdo.png" id="9_wdlhe"]
+[ext_resource type="Texture2D" uid="uid://dbvgqdipqqce5" path="res://assets/sprites/octopus_minigame/sastredesnudo.png" id="10_560jd"]
 
 [node name="OctopusCostumeMinigame" type="Node2D"]
 script = ExtResource("1_netmy")
 
 [node name="canvas_layer" type="CanvasLayer" parent="."]
 
-[node name="octopus_costume_limb" parent="canvas_layer" instance=ExtResource("2_o3arj")]
+[node name="MinigameArea5" parent="canvas_layer" instance=ExtResource("3_yn83y")]
+position = Vector2(548, 232)
+
+[node name="MinigameArea4" parent="canvas_layer" instance=ExtResource("3_yn83y")]
+position = Vector2(571, 403)
+
+[node name="MinigameArea3" parent="canvas_layer" instance=ExtResource("3_yn83y")]
+position = Vector2(531, 402)
+
+[node name="MinigameArea2" parent="canvas_layer" instance=ExtResource("3_yn83y")]
+position = Vector2(501, 291)
 
 [node name="MinigameArea" parent="canvas_layer" instance=ExtResource("3_yn83y")]
-position = Vector2(359, 315)
+position = Vector2(595, 290)
 
 [node name="control" type="Control" parent="canvas_layer"]
 layout_mode = 3
@@ -34,4 +50,64 @@ max_value = 1.0
 show_percentage = false
 script = ExtResource("2_netmy")
 
+[node name="NakedMan" type="Sprite2D" parent="canvas_layer"]
+position = Vector2(566, 332)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_560jd")
+
+[node name="octopus_costume_limb2" parent="canvas_layer" node_paths=PackedStringArray("area") instance=ExtResource("2_o3arj")]
+position = Vector2(211, 146)
+area = NodePath("../MinigameArea2")
+
+[node name="Sprite2D" type="Sprite2D" parent="canvas_layer/octopus_costume_limb2"]
+position = Vector2(-11.425, 0)
+rotation = 4.26908
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_ets8c")
+
+[node name="octopus_costume_limb4" parent="canvas_layer" node_paths=PackedStringArray("area") instance=ExtResource("2_o3arj")]
+position = Vector2(701, 459)
+area = NodePath("../MinigameArea4")
+
+[node name="Sprite2D" type="Sprite2D" parent="canvas_layer/octopus_costume_limb4"]
+position = Vector2(34.415, 0)
+rotation = -1.57952
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_s2jm4")
+
+[node name="octopus_costume_limb3" parent="canvas_layer" node_paths=PackedStringArray("area") instance=ExtResource("2_o3arj")]
+position = Vector2(343, 462)
+area = NodePath("../MinigameArea3")
+
+[node name="Sprite2D" type="Sprite2D" parent="canvas_layer/octopus_costume_limb3"]
+position = Vector2(-18.18, 0)
+rotation = -1.67552
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_30h1r")
+
+[node name="octopus_costume_limb" parent="canvas_layer" node_paths=PackedStringArray("area") instance=ExtResource("2_o3arj")]
+position = Vector2(925, 304)
+area = NodePath("../MinigameArea")
+
+[node name="Sprite2D" type="Sprite2D" parent="canvas_layer/octopus_costume_limb"]
+position = Vector2(-18.18, 0)
+rotation = -1.31598
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_wdlhe")
+
+[node name="octopus_costume_limb5" parent="canvas_layer" node_paths=PackedStringArray("area") instance=ExtResource("2_o3arj")]
+position = Vector2(719, 131)
+area = NodePath("../MinigameArea5")
+
+[node name="Sprite2D" type="Sprite2D" parent="canvas_layer/octopus_costume_limb5"]
+position = Vector2(-4, 0)
+rotation = -1.55509
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_88mxi")
+
 [connection signal="timeout" from="canvas_layer/control/timer" to="." method="finished"]
+[connection signal="finished" from="canvas_layer/octopus_costume_limb2" to="." method="freeOne"]
+[connection signal="finished" from="canvas_layer/octopus_costume_limb4" to="." method="freeOne"]
+[connection signal="finished" from="canvas_layer/octopus_costume_limb3" to="." method="freeOne"]
+[connection signal="finished" from="canvas_layer/octopus_costume_limb" to="." method="freeOne"]
+[connection signal="finished" from="canvas_layer/octopus_costume_limb5" to="." method="freeOne"]
