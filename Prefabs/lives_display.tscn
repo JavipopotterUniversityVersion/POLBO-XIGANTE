@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dc873ajjj0nyd"]
 
 [ext_resource type="Script" uid="uid://bnq3cj4464l01" path="res://Scripts/lives_display.gd" id="1_1gg7y"]
-[ext_resource type="Texture2D" uid="uid://dfncfv4f8u5ce" path="res://assets/sprites/icon.svg" id="1_xh7ww"]
+[ext_resource type="PackedScene" uid="uid://bjivr4lhgge45" path="res://Prefabs/live.tscn" id="2_1gg7y"]
 
 [node name="lives_display" type="Control" node_paths=PackedStringArray("sprites")]
 layout_mode = 3
@@ -13,45 +13,18 @@ offset_right = -68.0
 offset_bottom = 200.0
 grow_horizontal = 2
 script = ExtResource("1_1gg7y")
-sprites = [NodePath("live/sr"), NodePath("live2/sr"), NodePath("live3/sr")]
+sprites = [NodePath("live"), NodePath("live2"), NodePath("live3")]
 
-[node name="live" type="Control" parent="."]
-layout_mode = 2
-anchors_preset = 0
-offset_left = 21.0
-offset_top = 204.0
-offset_right = 149.0
-offset_bottom = 341.0
+[node name="live" parent="." instance=ExtResource("2_1gg7y")]
 
-[node name="sr" type="TextureRect" parent="live"]
-layout_mode = 0
-offset_right = 128.0
-offset_bottom = 128.0
-texture = ExtResource("1_xh7ww")
+[node name="live2" parent="." instance=ExtResource("2_1gg7y")]
+offset_left = 450.0
+offset_top = -13.0
+offset_right = 578.0
+offset_bottom = 124.0
 
-[node name="live2" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 431.0
-offset_right = 559.0
-offset_bottom = 137.0
-
-[node name="sr" type="TextureRect" parent="live2"]
-layout_mode = 0
-offset_right = 128.0
-offset_bottom = 128.0
-texture = ExtResource("1_xh7ww")
-
-[node name="live3" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 832.0
-offset_top = 204.0
-offset_right = 960.0
-offset_bottom = 341.0
-
-[node name="sr" type="TextureRect" parent="live3"]
-layout_mode = 0
-offset_right = 128.0
-offset_bottom = 128.0
-texture = ExtResource("1_xh7ww")
+[node name="live3" parent="." instance=ExtResource("2_1gg7y")]
+offset_left = 844.0
+offset_top = 197.0
+offset_right = 972.0
+offset_bottom = 334.0

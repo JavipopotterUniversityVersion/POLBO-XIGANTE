@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjivr4lhgge45"]
+
+[ext_resource type="Shader" uid="uid://bt23shgtx7434" path="res://Shaders/wobbly.gdshader" id="1_6713j"]
+[ext_resource type="Texture2D" uid="uid://dhn3q24qa3u00" path="res://assets/sprites/heart.png" id="2_klbgp"]
+[ext_resource type="Script" uid="uid://dyofpn5dugoxg" path="res://Scripts/one_frame_change.gd" id="3_xscg2"]
+[ext_resource type="Texture2D" uid="uid://bvm2cx4ayvgsf" path="res://assets/sprites/heart_ugly.png" id="4_fkrir"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fajp3"]
+shader = ExtResource("1_6713j")
+shader_parameter/interval = 0.05
+shader_parameter/timeDelay = 0.0
+shader_parameter/intensityX = 5.0
+shader_parameter/intensityY = 5.0
+shader_parameter/seed = 42.0
+
+[node name="live" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 21.0
+offset_top = 204.0
+offset_right = 149.0
+offset_bottom = 341.0
+
+[node name="sr" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_fajp3")
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+texture = ExtResource("2_klbgp")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("3_xscg2")
+normal_tex = ExtResource("2_klbgp")
+altered_textures = Array[Texture2D]([ExtResource("4_fkrir")])
+probability = 0.001
