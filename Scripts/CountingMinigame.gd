@@ -5,5 +5,6 @@ class_name CountingMinigame
 
 func freeOne():
 	count -= 1
+	print("count")
 	if count <= 0:
 		succed()

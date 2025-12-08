@@ -1,15 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dtbxmoay6hn7q"]
-
-[ext_resource type="Texture2D" uid="uid://dfncfv4f8u5ce" path="res://assets/sprites/icon.svg" id="1_tl225"]
+[gd_scene load_steps=2 format=3 uid="uid://dtbxmoay6hn7q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_110es"]
-size = Vector2(117, 116)
+size = Vector2(36, 116)
 
 [node name="MinigameArea" type="StaticBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -1)
 shape = SubResource("RectangleShape2D_110es")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_tl225")

@@ -6,7 +6,8 @@ var in_area:bool = false
 var finish:bool = false
 
 var offset:Vector2
-var areaPosition:Vector2
+
+@export var area:StaticBody2D
 
 signal finished
 
@@ -23,7 +24,7 @@ func _process(delta: float) -> void:
 		clicked = false
 		
 		if in_area:
-			global_position = areaPosition - offset
+			global_position = area.global_position
 			finish = true
 			finished.emit()
 
@@ -36,8 +37,8 @@ func _on_mouse_exited() -> void:
 	
 
 func _on_body_entered(body: StaticBody2D) -> void:
-	in_area = true
-	areaPosition = body.global_position
+	if body == area:
+		in_area = true
 
 func _on_body_exited(body: StaticBody2D) -> void:
 	in_area = false
