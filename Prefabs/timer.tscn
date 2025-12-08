@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://b31ya55b7ttxa"]
+
+[ext_resource type="Script" uid="uid://deq3pqhyfqwj2" path="res://Scripts/MinigameTimer.gd" id="1_onc7o"]
+
+[node name="timer" type="ProgressBar"]
+offset_left = 31.0
+offset_top = 598.0
+offset_right = 1124.0
+offset_bottom = 625.0
+max_value = 1.0
+show_percentage = false
+script = ExtResource("1_onc7o")

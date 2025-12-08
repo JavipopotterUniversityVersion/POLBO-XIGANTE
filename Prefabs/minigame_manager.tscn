@@ -24,6 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Render"]
 material = ExtResource("2_d8b51")
@@ -33,11 +34,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = SubResource("ViewportTexture_wqwhv")
 
 [node name="SubViewport" type="SubViewport" parent="."]
 size = Vector2i(1142, 648)
 
 [node name="TransitionElems" parent="SubViewport" instance=ExtResource("3_d8b51")]
+mouse_filter = 2
 trans_mat = ExtResource("2_d8b51")
 transition_settings = Array[ExtResource("4_wqwhv")]([ExtResource("5_fq3ls")])

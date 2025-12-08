@@ -8,4 +8,5 @@ func _ready() -> void:
 	lives.on_lives_changed.connect(update_display)
 
 func update_display(value:int):
-	anims[value].play(&"FALL")
+	pass
+	#anims[value].play(&"FALL")
