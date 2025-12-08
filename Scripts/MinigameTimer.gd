@@ -5,7 +5,6 @@ extends ProgressBar
 
 @export var time:float = 5.0
 var time_left:float = time
-var finished:bool = false
 
 # signal emitted when the timer reaches 0
 signal timeout
@@ -20,7 +19,6 @@ func _process(delta: float) -> void:
 	if time_left < time*show_bar_at_percentage:
 		visible = true
 	
-	if time_left <= 0 and not finished:
+	if time_left <= 0:
 		timeout.emit()
-		finished = true
-		print("minigame timer timeout")
+		#print("signal emitted")
