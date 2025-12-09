@@ -1,5 +1,7 @@
-extends Node
+extends AnimatedSprite2D
 
+@export var animationName:String
 
 func playAnim():
-	pass; #sigo mañana
+	play(animationName)
+	await animation_finished
