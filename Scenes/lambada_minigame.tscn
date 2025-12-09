@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bhv2idnl3ow6e"]
+[gd_scene load_steps=12 format=3 uid="uid://bhv2idnl3ow6e"]
 
 [ext_resource type="Script" uid="uid://p8ft1du3jieh" path="res://Scripts/CountingMinigame.gd" id="1_wp87x"]
 [ext_resource type="PackedScene" uid="uid://b31ya55b7ttxa" path="res://Prefabs/timer.tscn" id="2_g42vc"]
 [ext_resource type="Script" uid="uid://gdggawed12qc" path="res://Scripts/EmitOnClick.gd" id="3_g42vc"]
 [ext_resource type="Texture2D" uid="uid://cp4g6jhn4gxp0" path="res://assets/sprites/muller_enfadada.jpg" id="3_h33xa"]
 [ext_resource type="Texture2D" uid="uid://dutdnrdc5edim" path="res://assets/sprites/muller_golpeando.jpg" id="4_2ypk1"]
+[ext_resource type="Script" uid="uid://bo3fqrr2w6f48" path="res://Scripts/PlayAnimation.gd" id="5_2ypk1"]
 [ext_resource type="Texture2D" uid="uid://df7gqjsv6a8a0" path="res://assets/sprites/neno_ledo.jpg" id="6_f7pcs"]
 [ext_resource type="Texture2D" uid="uid://da6dn4inq3tqp" path="res://assets/sprites/neno_triste.png" id="7_2yrhe"]
 
@@ -51,6 +52,7 @@ animations = [{
 
 [node name="LambadaMinigame" type="Node2D"]
 script = ExtResource("1_wp87x")
+count = 3
 
 [node name="canvas_layer" type="CanvasLayer" parent="."]
 
@@ -78,13 +80,17 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="Criada" type="AnimatedSprite2D" parent="."]
-position = Vector2(370, 307)
+position = Vector2(-203, -25.925)
 scale = Vector2(0.445, 0.445)
 sprite_frames = SubResource("SpriteFrames_tmkur")
+script = ExtResource("5_2ypk1")
+animationName = "lambada"
+idle = "default"
 
 [node name="Neno" type="Area2D" parent="."]
-position = Vector2(714, 322)
+position = Vector2(141, -10.925)
 script = ExtResource("3_g42vc")
+cooldown = 0.3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Neno"]
 position = Vector2(-2, 1.5)
@@ -94,6 +100,12 @@ shape = SubResource("RectangleShape2D_g42vc")
 scale = Vector2(0.21, 0.21)
 sprite_frames = SubResource("SpriteFrames_g42vc")
 frame_progress = 0.977946
+script = ExtResource("5_2ypk1")
+animationName = "lambada"
+idle = "default"
 
+[connection signal="clicked" from="Neno" to="." method="freeOne"]
+[connection signal="clicked" from="Neno" to="Criada" method="playAnim"]
+[connection signal="clicked" from="Neno" to="Neno/AnimatedSprite2D" method="playAnim"]
 [connection signal="mouse_entered" from="Neno" to="Neno" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Neno" to="Neno" method="_on_mouse_exited"]
