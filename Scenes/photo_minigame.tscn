@@ -24,7 +24,6 @@ size = Vector2(1.06197, 1.02088)
 script = ExtResource("1_4gjhm")
 
 [node name="canvas_layer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="control" type="Control" parent="canvas_layer"]
 layout_mode = 3
@@ -33,6 +32,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="timer" type="ProgressBar" parent="canvas_layer/control"]
@@ -48,7 +48,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="photo" type="MeshInstance2D" parent="."]
 material = SubResource("ShaderMaterial_nb63l")
-position = Vector2(573, 308.5)
+position = Vector2(-0.999939, 2)
 scale = Vector2(710, -479)
 mesh = SubResource("QuadMesh_ajvxf")
 texture = ExtResource("4_o3c48")
@@ -60,5 +60,6 @@ script = ExtResource("6_fangb")
 position = Vector2(-3.1665e-08, 0.00939457)
 shape = SubResource("RectangleShape2D_nb63l")
 
-[connection signal="texture_changed" from="photo" to="." method="finished"]
+[connection signal="timeout" from="canvas_layer/control/timer" to="." method="finished"]
+[connection signal="completed" from="photo" to="." method="succed"]
 [connection signal="visibility_changed" from="photo" to="." method="_on_photo_visibility_changed"]
