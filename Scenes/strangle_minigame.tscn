@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://tigixn6xylsa"]
+[gd_scene load_steps=13 format=3 uid="uid://tigixn6xylsa"]
 
 [ext_resource type="Script" uid="uid://d0daruy3r65sd" path="res://Scripts/Minigame.gd" id="1_bm5vv"]
 [ext_resource type="Script" uid="uid://deq3pqhyfqwj2" path="res://Scripts/MinigameTimer.gd" id="2_nkf4n"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ck68jx8h1fhwi" path="res://assets/sprites/particles/sweat.png" id="4_6povn"]
 [ext_resource type="Texture2D" uid="uid://bys6upkwjcqmm" path="res://assets/sprites/tentaculo agarrando tío.png" id="4_nhtsw"]
 [ext_resource type="Texture2D" uid="uid://cx05w0h1ntrgb" path="res://assets/sprites/galisia.jpg" id="6_6fnpb"]
+[ext_resource type="PackedScene" uid="uid://cp2sgiff8xhpn" path="res://Prefabs/axitar!!.tscn" id="8_de2mu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_de2mu"]
 shader = ExtResource("3_nhtsw")
@@ -102,5 +103,9 @@ z_index = -1
 position = Vector2(50, -5)
 scale = Vector2(2, 2)
 texture = ExtResource("6_6fnpb")
+
+[node name="Axitar!!" parent="." instance=ExtResource("8_de2mu")]
+modulate = Color(1, 1, 1, 1)
+position = Vector2(80, 22)
 
 [connection signal="timeout" from="canvas_layer/control/timer" to="." method="finished"]
