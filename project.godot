@@ -20,6 +20,7 @@ config/icon="res://assets/sprites/icon.svg"
 SceneManager="*res://addons/scene_manager/SceneManager.tscn"
 Camera="*res://Scripts/Camera.gd"
 HitStopManager="*res://Scripts/HitStopManager.gd"
+AudioManager="*res://Prefabs/audio_manager.tscn"
 
 [editor_plugins]
 

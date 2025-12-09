@@ -28,7 +28,10 @@ func start():
 			transition_elems.unfade()
 			
 			if not minigame.has_won():
+				AudioManager.play_sound("no")
 				lives.substract_live()
+			else:
+				AudioManager.play_sound("si")
 			
 			await get_tree().create_timer(0.2).timeout
 			minigame.queue_free()

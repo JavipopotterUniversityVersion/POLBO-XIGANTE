@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://chjstfmwyk42i"]
+
+[ext_resource type="Script" uid="uid://nyx0urel3ud5" path="res://Scripts/audio_manager.gd" id="1_203tp"]
+[ext_resource type="AudioStream" uid="uid://dlkpgo6gdcjsy" path="res://assets/audioClips/si.wav" id="2_ga8lj"]
+[ext_resource type="AudioStream" uid="uid://cjedtwacnsnbu" path="res://assets/audioClips/no.wav" id="3_rgjcj"]
+
+[node name="audio_manager" type="Node"]
+script = ExtResource("1_203tp")
+
+[node name="si" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ga8lj")
+
+[node name="no" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_rgjcj")

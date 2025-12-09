@@ -1,12 +1,33 @@
-[gd_scene load_steps=6 format=3 uid="uid://tigixn6xylsa"]
+[gd_scene load_steps=12 format=3 uid="uid://tigixn6xylsa"]
 
 [ext_resource type="Script" uid="uid://d0daruy3r65sd" path="res://Scripts/Minigame.gd" id="1_bm5vv"]
 [ext_resource type="Script" uid="uid://deq3pqhyfqwj2" path="res://Scripts/MinigameTimer.gd" id="2_nkf4n"]
 [ext_resource type="Script" uid="uid://dfe1y1whtbwf0" path="res://Scripts/tentacle.gd" id="2_upm5h"]
+[ext_resource type="Shader" uid="uid://1gj0b2tvuj2m" path="res://Shaders/outline.gdshader" id="3_nhtsw"]
+[ext_resource type="Texture2D" uid="uid://ck68jx8h1fhwi" path="res://assets/sprites/particles/sweat.png" id="4_6povn"]
+[ext_resource type="Texture2D" uid="uid://bys6upkwjcqmm" path="res://assets/sprites/tentaculo agarrando tío.png" id="4_nhtsw"]
+[ext_resource type="Texture2D" uid="uid://cx05w0h1ntrgb" path="res://assets/sprites/galisia.jpg" id="6_6fnpb"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_nkf4n"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_de2mu"]
+shader = ExtResource("3_nhtsw")
+shader_parameter/outline_width = 20.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_upm5h"]
+[sub_resource type="Curve" id="Curve_6povn"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_1b2rl"]
+curve = SubResource("Curve_6povn")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1b2rl"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 65.706
+initial_velocity_min = 273.89
+initial_velocity_max = 331.21
+gravity = Vector3(0, 200, 0)
+alpha_curve = SubResource("CurveTexture_1b2rl")
 
 [node name="StrangleMinigame" type="Node2D"]
 script = ExtResource("1_bm5vv")
@@ -42,21 +63,44 @@ offset_right = -124.0
 offset_bottom = 83.0
 grow_horizontal = 2
 
-[node name="tentacle" type="Sprite2D" parent="." node_paths=PackedStringArray("guy", "minigame", "progress_bar")]
+[node name="tentacle" type="Sprite2D" parent="." node_paths=PackedStringArray("guy", "minigame", "progress_bar", "sweat")]
+material = SubResource("ShaderMaterial_de2mu")
 position = Vector2(16, 403)
 scale = Vector2(34, 393.5)
-texture = SubResource("PlaceholderTexture2D_nkf4n")
 offset = Vector2(0.0294118, -0.525413)
 script = ExtResource("2_upm5h")
 target_dist = 10000.0
 dist_loose = 1000.0
-guy = NodePath("guy")
+guy = NodePath("Sprite2D")
 minigame = NodePath("..")
 progress_bar = NodePath("../canvas_layer/control/ProgressBar")
+sweat = NodePath("GPUParticles2D")
 
 [node name="guy" type="Sprite2D" parent="tentacle"]
-position = Vector2(-0.0882354, -1.04193)
-scale = Vector2(3.57353, 0.319597)
-texture = SubResource("PlaceholderTexture2D_upm5h")
+position = Vector2(0.294118, -0.754765)
+rotation = -2.96717
+scale = Vector2(0.00328712, 0.00660789)
+skew = 1.35403
+texture = ExtResource("4_nhtsw")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="tentacle"]
+position = Vector2(-1.5, -1.06734)
+scale = Vector2(0.0294118, 0.0025413)
+amount = 64
+texture = ExtResource("4_6povn")
+process_material = SubResource("ParticleProcessMaterial_1b2rl")
+
+[node name="Sprite2D" type="Sprite2D" parent="tentacle"]
+material = SubResource("ShaderMaterial_de2mu")
+position = Vector2(-2.23529, -1.26302)
+rotation = 1.48829
+scale = Vector2(0.000203992, 0.00235288)
+skew = 0.0818932
+
+[node name="Galisia" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(50, -5)
+scale = Vector2(2, 2)
+texture = ExtResource("6_6fnpb")
 
 [connection signal="timeout" from="canvas_layer/control/timer" to="." method="finished"]

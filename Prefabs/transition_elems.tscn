@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b3oka26upbeaw"]
+[gd_scene load_steps=14 format=3 uid="uid://b3oka26upbeaw"]
 
 [ext_resource type="Script" uid="uid://bidh7kv51pggd" path="res://Scripts/TransitionElems.gd" id="1_wv2l7"]
 [ext_resource type="Material" uid="uid://c03kju2yodtu0" path="res://Materials/transition_mat.tres" id="2_kuxo6"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://dvi2w1q51bxfk" path="res://Scripts/transition_settings.gd" id="3_udo8e"]
 [ext_resource type="Resource" uid="uid://dfr6hq1n7phuv" path="res://Resources/star_trans.tres" id="4_if2rt"]
 [ext_resource type="Texture2D" uid="uid://c75qb3ixqv1l4" path="res://assets/sprites/sastre_dance.png" id="6_udo8e"]
+[ext_resource type="Script" uid="uid://bc0w7igs835wk" path="res://Scripts/random_guille_jump.gd" id="7_d4up4"]
+[ext_resource type="PackedScene" uid="uid://c0p3wcxv1xqvp" path="res://Prefabs/guille.tscn" id="7_if2rt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wv2l7"]
 shader = ExtResource("2_r3wyl")
@@ -211,6 +213,321 @@ libraries = {
 }
 autoplay = "DANCE"
 speed_scale = 1.2
+
+[node name="jumps" type="Control" parent="animations"]
+y_sort_enabled = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="guilles" type="Node2D" parent="animations/jumps"]
+position = Vector2(-176, 507)
+script = ExtResource("7_d4up4")
+
+[node name="guille" parent="animations/jumps/guilles" instance=ExtResource("7_if2rt")]
+
+[node name="guille2" parent="animations/jumps/guilles" instance=ExtResource("7_if2rt")]
+position = Vector2(93, 0)
+
+[node name="guille3" parent="animations/jumps/guilles" instance=ExtResource("7_if2rt")]
+position = Vector2(191, 0)
+
+[node name="guille4" parent="animations/jumps/guilles" instance=ExtResource("7_if2rt")]
+position = Vector2(284, 0)
+
+[node name="guille5" parent="animations/jumps/guilles" instance=ExtResource("7_if2rt")]
+position = Vector2(376, 0)
+
+[node name="guille6" parent="animations/jumps/guilles" instance=ExtResource("7_if2rt")]
+position = Vector2(469, 0)
+
+[node name="guille7" parent="animations/jumps/guilles" instance=ExtResource("7_if2rt")]
+position = Vector2(567, 0)
+
+[node name="guille8" parent="animations/jumps/guilles" instance=ExtResource("7_if2rt")]
+position = Vector2(660, 0)
+
+[node name="guille9" parent="animations/jumps/guilles" instance=ExtResource("7_if2rt")]
+position = Vector2(735, 5)
+
+[node name="guille10" parent="animations/jumps/guilles" instance=ExtResource("7_if2rt")]
+position = Vector2(828, 5)
+
+[node name="guille11" parent="animations/jumps/guilles" instance=ExtResource("7_if2rt")]
+position = Vector2(926, 5)
+
+[node name="guille12" parent="animations/jumps/guilles" instance=ExtResource("7_if2rt")]
+position = Vector2(1019, 5)
+
+[node name="guille13" parent="animations/jumps/guilles" instance=ExtResource("7_if2rt")]
+position = Vector2(1094, 0)
+
+[node name="guille14" parent="animations/jumps/guilles" instance=ExtResource("7_if2rt")]
+position = Vector2(1187, 0)
+
+[node name="guille15" parent="animations/jumps/guilles" instance=ExtResource("7_if2rt")]
+position = Vector2(1285, 0)
+
+[node name="guille16" parent="animations/jumps/guilles" instance=ExtResource("7_if2rt")]
+position = Vector2(1378, 0)
+
+[node name="guilles2" type="Node2D" parent="animations/jumps"]
+position = Vector2(-116, 376)
+script = ExtResource("7_d4up4")
+
+[node name="guille" parent="animations/jumps/guilles2" instance=ExtResource("7_if2rt")]
+
+[node name="guille2" parent="animations/jumps/guilles2" instance=ExtResource("7_if2rt")]
+position = Vector2(93, 0)
+
+[node name="guille3" parent="animations/jumps/guilles2" instance=ExtResource("7_if2rt")]
+position = Vector2(191, 0)
+
+[node name="guille4" parent="animations/jumps/guilles2" instance=ExtResource("7_if2rt")]
+position = Vector2(284, 0)
+
+[node name="guille5" parent="animations/jumps/guilles2" instance=ExtResource("7_if2rt")]
+position = Vector2(376, 0)
+
+[node name="guille6" parent="animations/jumps/guilles2" instance=ExtResource("7_if2rt")]
+position = Vector2(469, 0)
+
+[node name="guille7" parent="animations/jumps/guilles2" instance=ExtResource("7_if2rt")]
+position = Vector2(567, 0)
+
+[node name="guille8" parent="animations/jumps/guilles2" instance=ExtResource("7_if2rt")]
+position = Vector2(660, 0)
+
+[node name="guille9" parent="animations/jumps/guilles2" instance=ExtResource("7_if2rt")]
+position = Vector2(735, 5)
+
+[node name="guille10" parent="animations/jumps/guilles2" instance=ExtResource("7_if2rt")]
+position = Vector2(828, 5)
+
+[node name="guille11" parent="animations/jumps/guilles2" instance=ExtResource("7_if2rt")]
+position = Vector2(926, 5)
+
+[node name="guille12" parent="animations/jumps/guilles2" instance=ExtResource("7_if2rt")]
+position = Vector2(1019, 5)
+
+[node name="guille13" parent="animations/jumps/guilles2" instance=ExtResource("7_if2rt")]
+position = Vector2(1094, 0)
+
+[node name="guille14" parent="animations/jumps/guilles2" instance=ExtResource("7_if2rt")]
+position = Vector2(1187, 0)
+
+[node name="guille15" parent="animations/jumps/guilles2" instance=ExtResource("7_if2rt")]
+position = Vector2(1285, 0)
+
+[node name="guille16" parent="animations/jumps/guilles2" instance=ExtResource("7_if2rt")]
+position = Vector2(1378, 0)
+
+[node name="guilles3" type="Node2D" parent="animations/jumps"]
+position = Vector2(-186, 257)
+script = ExtResource("7_d4up4")
+
+[node name="guille" parent="animations/jumps/guilles3" instance=ExtResource("7_if2rt")]
+
+[node name="guille2" parent="animations/jumps/guilles3" instance=ExtResource("7_if2rt")]
+position = Vector2(93, 0)
+
+[node name="guille3" parent="animations/jumps/guilles3" instance=ExtResource("7_if2rt")]
+position = Vector2(191, 0)
+
+[node name="guille4" parent="animations/jumps/guilles3" instance=ExtResource("7_if2rt")]
+position = Vector2(284, 0)
+
+[node name="guille5" parent="animations/jumps/guilles3" instance=ExtResource("7_if2rt")]
+position = Vector2(376, 0)
+
+[node name="guille6" parent="animations/jumps/guilles3" instance=ExtResource("7_if2rt")]
+position = Vector2(469, 0)
+
+[node name="guille7" parent="animations/jumps/guilles3" instance=ExtResource("7_if2rt")]
+position = Vector2(567, 0)
+
+[node name="guille8" parent="animations/jumps/guilles3" instance=ExtResource("7_if2rt")]
+position = Vector2(660, 0)
+
+[node name="guille9" parent="animations/jumps/guilles3" instance=ExtResource("7_if2rt")]
+position = Vector2(735, 5)
+
+[node name="guille10" parent="animations/jumps/guilles3" instance=ExtResource("7_if2rt")]
+position = Vector2(828, 5)
+
+[node name="guille11" parent="animations/jumps/guilles3" instance=ExtResource("7_if2rt")]
+position = Vector2(926, 5)
+
+[node name="guille12" parent="animations/jumps/guilles3" instance=ExtResource("7_if2rt")]
+position = Vector2(1019, 5)
+
+[node name="guille13" parent="animations/jumps/guilles3" instance=ExtResource("7_if2rt")]
+position = Vector2(1094, 0)
+
+[node name="guille14" parent="animations/jumps/guilles3" instance=ExtResource("7_if2rt")]
+position = Vector2(1187, 0)
+
+[node name="guille15" parent="animations/jumps/guilles3" instance=ExtResource("7_if2rt")]
+position = Vector2(1285, 0)
+
+[node name="guille16" parent="animations/jumps/guilles3" instance=ExtResource("7_if2rt")]
+position = Vector2(1378, 0)
+
+[node name="guilles4" type="Node2D" parent="animations/jumps"]
+position = Vector2(-86, 152)
+script = ExtResource("7_d4up4")
+
+[node name="guille" parent="animations/jumps/guilles4" instance=ExtResource("7_if2rt")]
+
+[node name="guille2" parent="animations/jumps/guilles4" instance=ExtResource("7_if2rt")]
+position = Vector2(93, 0)
+
+[node name="guille3" parent="animations/jumps/guilles4" instance=ExtResource("7_if2rt")]
+position = Vector2(191, 0)
+
+[node name="guille4" parent="animations/jumps/guilles4" instance=ExtResource("7_if2rt")]
+position = Vector2(284, 0)
+
+[node name="guille5" parent="animations/jumps/guilles4" instance=ExtResource("7_if2rt")]
+position = Vector2(376, 0)
+
+[node name="guille6" parent="animations/jumps/guilles4" instance=ExtResource("7_if2rt")]
+position = Vector2(469, 0)
+
+[node name="guille7" parent="animations/jumps/guilles4" instance=ExtResource("7_if2rt")]
+position = Vector2(567, 0)
+
+[node name="guille8" parent="animations/jumps/guilles4" instance=ExtResource("7_if2rt")]
+position = Vector2(660, 0)
+
+[node name="guille9" parent="animations/jumps/guilles4" instance=ExtResource("7_if2rt")]
+position = Vector2(735, 5)
+
+[node name="guille10" parent="animations/jumps/guilles4" instance=ExtResource("7_if2rt")]
+position = Vector2(828, 5)
+
+[node name="guille11" parent="animations/jumps/guilles4" instance=ExtResource("7_if2rt")]
+position = Vector2(926, 5)
+
+[node name="guille12" parent="animations/jumps/guilles4" instance=ExtResource("7_if2rt")]
+position = Vector2(1019, 5)
+
+[node name="guille13" parent="animations/jumps/guilles4" instance=ExtResource("7_if2rt")]
+position = Vector2(1094, 0)
+
+[node name="guille14" parent="animations/jumps/guilles4" instance=ExtResource("7_if2rt")]
+position = Vector2(1187, 0)
+
+[node name="guille15" parent="animations/jumps/guilles4" instance=ExtResource("7_if2rt")]
+position = Vector2(1285, 0)
+
+[node name="guille16" parent="animations/jumps/guilles4" instance=ExtResource("7_if2rt")]
+position = Vector2(1378, 0)
+
+[node name="guilles5" type="Node2D" parent="animations/jumps"]
+position = Vector2(-196, 44)
+script = ExtResource("7_d4up4")
+
+[node name="guille" parent="animations/jumps/guilles5" instance=ExtResource("7_if2rt")]
+
+[node name="guille2" parent="animations/jumps/guilles5" instance=ExtResource("7_if2rt")]
+position = Vector2(93, 0)
+
+[node name="guille3" parent="animations/jumps/guilles5" instance=ExtResource("7_if2rt")]
+position = Vector2(191, 0)
+
+[node name="guille4" parent="animations/jumps/guilles5" instance=ExtResource("7_if2rt")]
+position = Vector2(284, 0)
+
+[node name="guille5" parent="animations/jumps/guilles5" instance=ExtResource("7_if2rt")]
+position = Vector2(376, 0)
+
+[node name="guille6" parent="animations/jumps/guilles5" instance=ExtResource("7_if2rt")]
+position = Vector2(469, 0)
+
+[node name="guille7" parent="animations/jumps/guilles5" instance=ExtResource("7_if2rt")]
+position = Vector2(567, 0)
+
+[node name="guille8" parent="animations/jumps/guilles5" instance=ExtResource("7_if2rt")]
+position = Vector2(660, 0)
+
+[node name="guille9" parent="animations/jumps/guilles5" instance=ExtResource("7_if2rt")]
+position = Vector2(735, 5)
+
+[node name="guille10" parent="animations/jumps/guilles5" instance=ExtResource("7_if2rt")]
+position = Vector2(828, 5)
+
+[node name="guille11" parent="animations/jumps/guilles5" instance=ExtResource("7_if2rt")]
+position = Vector2(926, 5)
+
+[node name="guille12" parent="animations/jumps/guilles5" instance=ExtResource("7_if2rt")]
+position = Vector2(1019, 5)
+
+[node name="guille13" parent="animations/jumps/guilles5" instance=ExtResource("7_if2rt")]
+position = Vector2(1094, 0)
+
+[node name="guille14" parent="animations/jumps/guilles5" instance=ExtResource("7_if2rt")]
+position = Vector2(1187, 0)
+
+[node name="guille15" parent="animations/jumps/guilles5" instance=ExtResource("7_if2rt")]
+position = Vector2(1285, 0)
+
+[node name="guille16" parent="animations/jumps/guilles5" instance=ExtResource("7_if2rt")]
+position = Vector2(1378, 0)
+
+[node name="guilles6" type="Node2D" parent="animations/jumps"]
+position = Vector2(-86, -40)
+script = ExtResource("7_d4up4")
+
+[node name="guille" parent="animations/jumps/guilles6" instance=ExtResource("7_if2rt")]
+
+[node name="guille2" parent="animations/jumps/guilles6" instance=ExtResource("7_if2rt")]
+position = Vector2(93, 0)
+
+[node name="guille3" parent="animations/jumps/guilles6" instance=ExtResource("7_if2rt")]
+position = Vector2(191, 0)
+
+[node name="guille4" parent="animations/jumps/guilles6" instance=ExtResource("7_if2rt")]
+position = Vector2(284, 0)
+
+[node name="guille5" parent="animations/jumps/guilles6" instance=ExtResource("7_if2rt")]
+position = Vector2(376, 0)
+
+[node name="guille6" parent="animations/jumps/guilles6" instance=ExtResource("7_if2rt")]
+position = Vector2(469, 0)
+
+[node name="guille7" parent="animations/jumps/guilles6" instance=ExtResource("7_if2rt")]
+position = Vector2(567, 0)
+
+[node name="guille8" parent="animations/jumps/guilles6" instance=ExtResource("7_if2rt")]
+position = Vector2(660, 0)
+
+[node name="guille9" parent="animations/jumps/guilles6" instance=ExtResource("7_if2rt")]
+position = Vector2(735, 5)
+
+[node name="guille10" parent="animations/jumps/guilles6" instance=ExtResource("7_if2rt")]
+position = Vector2(828, 5)
+
+[node name="guille11" parent="animations/jumps/guilles6" instance=ExtResource("7_if2rt")]
+position = Vector2(926, 5)
+
+[node name="guille12" parent="animations/jumps/guilles6" instance=ExtResource("7_if2rt")]
+position = Vector2(1019, 5)
+
+[node name="guille13" parent="animations/jumps/guilles6" instance=ExtResource("7_if2rt")]
+position = Vector2(1094, 0)
+
+[node name="guille14" parent="animations/jumps/guilles6" instance=ExtResource("7_if2rt")]
+position = Vector2(1187, 0)
+
+[node name="guille15" parent="animations/jumps/guilles6" instance=ExtResource("7_if2rt")]
+position = Vector2(1285, 0)
+
+[node name="guille16" parent="animations/jumps/guilles6" instance=ExtResource("7_if2rt")]
+position = Vector2(1378, 0)
 
 [node name="lives_display" parent="." instance=ExtResource("2_wv2l7")]
 layout_mode = 1

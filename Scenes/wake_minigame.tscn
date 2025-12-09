@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0r0g60gsn8q1"]
+[gd_scene load_steps=7 format=3 uid="uid://faahmoajknls"]
 
 [ext_resource type="Script" uid="uid://p8ft1du3jieh" path="res://Scripts/CountingMinigame.gd" id="1_vxaps"]
 [ext_resource type="Script" uid="uid://deq3pqhyfqwj2" path="res://Scripts/MinigameTimer.gd" id="2_076wh"]
