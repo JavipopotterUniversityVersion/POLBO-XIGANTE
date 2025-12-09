@@ -12,7 +12,6 @@ script = ExtResource("1_vxaps")
 count = 4
 
 [node name="canvas_layer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="control" type="Control" parent="canvas_layer"]
 layout_mode = 3

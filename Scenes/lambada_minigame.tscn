@@ -1,0 +1,99 @@
+[gd_scene load_steps=11 format=3 uid="uid://bhv2idnl3ow6e"]
+
+[ext_resource type="Script" uid="uid://p8ft1du3jieh" path="res://Scripts/CountingMinigame.gd" id="1_wp87x"]
+[ext_resource type="PackedScene" uid="uid://b31ya55b7ttxa" path="res://Prefabs/timer.tscn" id="2_g42vc"]
+[ext_resource type="Script" uid="uid://gdggawed12qc" path="res://Scripts/EmitOnClick.gd" id="3_g42vc"]
+[ext_resource type="Texture2D" uid="uid://cp4g6jhn4gxp0" path="res://assets/sprites/muller_enfadada.jpg" id="3_h33xa"]
+[ext_resource type="Texture2D" uid="uid://dutdnrdc5edim" path="res://assets/sprites/muller_golpeando.jpg" id="4_2ypk1"]
+[ext_resource type="Texture2D" uid="uid://df7gqjsv6a8a0" path="res://assets/sprites/neno_ledo.jpg" id="6_f7pcs"]
+[ext_resource type="Texture2D" uid="uid://da6dn4inq3tqp" path="res://assets/sprites/neno_triste.png" id="7_2yrhe"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tmkur"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_h33xa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("4_2ypk1")
+}],
+"loop": true,
+"name": &"lambada",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g42vc"]
+size = Vector2(214, 207)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g42vc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_f7pcs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("7_2yrhe")
+}],
+"loop": true,
+"name": &"lambada",
+"speed": 5.0
+}]
+
+[node name="LambadaMinigame" type="Node2D"]
+script = ExtResource("1_wp87x")
+
+[node name="canvas_layer" type="CanvasLayer" parent="."]
+
+[node name="control" type="Control" parent="canvas_layer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="timer" parent="canvas_layer/control" instance=ExtResource("2_g42vc")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -563.0
+offset_top = -43.0
+offset_right = 563.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Criada" type="AnimatedSprite2D" parent="."]
+position = Vector2(370, 307)
+scale = Vector2(0.445, 0.445)
+sprite_frames = SubResource("SpriteFrames_tmkur")
+
+[node name="Neno" type="Area2D" parent="."]
+position = Vector2(714, 322)
+script = ExtResource("3_g42vc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neno"]
+position = Vector2(-2, 1.5)
+shape = SubResource("RectangleShape2D_g42vc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Neno"]
+scale = Vector2(0.21, 0.21)
+sprite_frames = SubResource("SpriteFrames_g42vc")
+frame_progress = 0.977946
+
+[connection signal="mouse_entered" from="Neno" to="Neno" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Neno" to="Neno" method="_on_mouse_exited"]
