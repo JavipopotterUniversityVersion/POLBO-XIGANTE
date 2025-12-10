@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bgupr6uxhvai1"
+path="res://.godot/imported/Plastic Button A.wav-9252117c68fa78634c6c1688ca055a25.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Switches and Buttons/Plastic Button A.wav"
+dest_files=["res://.godot/imported/Plastic Button A.wav-9252117c68fa78634c6c1688ca055a25.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

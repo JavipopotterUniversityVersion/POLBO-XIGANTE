@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://vl4jrqhxmoyh"
+path="res://.godot/imported/Slide Whistle B.wav-477da12ab879ea4309b03e753f437985.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Comedy Sound FX Pack/Cartoon/Slide Whistle B.wav"
+dest_files=["res://.godot/imported/Slide Whistle B.wav-477da12ab879ea4309b03e753f437985.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

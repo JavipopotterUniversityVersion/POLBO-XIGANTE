@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b3pvt3cdtkbea"
+path="res://.godot/imported/Silly Tuba E.wav-06e3d5a38b6ecdf725e33e128202572b.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Comedy Sound FX Pack/Bad Instruments/Silly Tuba E.wav"
+dest_files=["res://.godot/imported/Silly Tuba E.wav-06e3d5a38b6ecdf725e33e128202572b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

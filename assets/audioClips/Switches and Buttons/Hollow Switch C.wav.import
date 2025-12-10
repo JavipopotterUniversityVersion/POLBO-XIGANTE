@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dbf12ypux0wt"
+path="res://.godot/imported/Hollow Switch C.wav-78d754f40aa59752145f4385d0255673.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Switches and Buttons/Hollow Switch C.wav"
+dest_files=["res://.godot/imported/Hollow Switch C.wav-78d754f40aa59752145f4385d0255673.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

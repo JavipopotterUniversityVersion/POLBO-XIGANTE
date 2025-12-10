@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b0k27s2henly2"
+path="res://.godot/imported/Dripish E.wav-13b941d516c1aa1c3f2bc5859f8d6b0d.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Comedy Sound FX Pack/Misc/Dripish E.wav"
+dest_files=["res://.godot/imported/Dripish E.wav-13b941d516c1aa1c3f2bc5859f8d6b0d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

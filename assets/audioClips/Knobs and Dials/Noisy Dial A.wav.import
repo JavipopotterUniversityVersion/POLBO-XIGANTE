@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dtqvhne4lx3s5"
+path="res://.godot/imported/Noisy Dial A.wav-5fa68d5f750685701398fb59359838df.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Knobs and Dials/Noisy Dial A.wav"
+dest_files=["res://.godot/imported/Noisy Dial A.wav-5fa68d5f750685701398fb59359838df.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

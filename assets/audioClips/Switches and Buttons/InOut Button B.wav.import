@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bk64552rf4r6q"
+path="res://.godot/imported/InOut Button B.wav-7d66fc52a7da0e5abafebd1e6c37e721.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Switches and Buttons/InOut Button B.wav"
+dest_files=["res://.godot/imported/InOut Button B.wav-7d66fc52a7da0e5abafebd1e6c37e721.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

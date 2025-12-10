@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c8merb7mrk4lk"
+path="res://.godot/imported/Boing B.wav-0c5bc8cc066df50acc1eb18e6e27a5e7.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Comedy Sound FX Pack/Misc/Boing B.wav"
+dest_files=["res://.godot/imported/Boing B.wav-0c5bc8cc066df50acc1eb18e6e27a5e7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

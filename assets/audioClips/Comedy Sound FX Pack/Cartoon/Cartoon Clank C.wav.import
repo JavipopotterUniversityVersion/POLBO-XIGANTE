@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bwvmv2hy42mgq"
+path="res://.godot/imported/Cartoon Clank C.wav-9d679abdb91f06c1ff3de001bc19653a.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Comedy Sound FX Pack/Cartoon/Cartoon Clank C.wav"
+dest_files=["res://.godot/imported/Cartoon Clank C.wav-9d679abdb91f06c1ff3de001bc19653a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

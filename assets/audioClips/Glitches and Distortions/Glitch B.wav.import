@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b088h6ngcajl3"
+path="res://.godot/imported/Glitch B.wav-58fe0f2b9f600644f40eb5d24026df24.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Glitches and Distortions/Glitch B.wav"
+dest_files=["res://.godot/imported/Glitch B.wav-58fe0f2b9f600644f40eb5d24026df24.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

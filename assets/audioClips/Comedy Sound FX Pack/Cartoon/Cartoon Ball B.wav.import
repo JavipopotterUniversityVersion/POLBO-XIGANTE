@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cb7cvrp0i2d47"
+path="res://.godot/imported/Cartoon Ball B.wav-b381f7ec12ddd48570fbfdeb3aec5c53.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Comedy Sound FX Pack/Cartoon/Cartoon Ball B.wav"
+dest_files=["res://.godot/imported/Cartoon Ball B.wav-b381f7ec12ddd48570fbfdeb3aec5c53.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

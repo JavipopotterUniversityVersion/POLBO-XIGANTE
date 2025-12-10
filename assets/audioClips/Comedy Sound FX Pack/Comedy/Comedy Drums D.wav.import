@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d1xgy2tin5ppw"
+path="res://.godot/imported/Comedy Drums D.wav-cb8964c94deebd1a7552377ba50dc60d.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Comedy Sound FX Pack/Comedy/Comedy Drums D.wav"
+dest_files=["res://.godot/imported/Comedy Drums D.wav-cb8964c94deebd1a7552377ba50dc60d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

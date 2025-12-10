@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c400mjfcl5huy"
+path="res://.godot/imported/Wooden Switch A.wav-466fef08aeb6b2067aff6b7a7234435d.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Switches and Buttons/Wooden Switch A.wav"
+dest_files=["res://.godot/imported/Wooden Switch A.wav-466fef08aeb6b2067aff6b7a7234435d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

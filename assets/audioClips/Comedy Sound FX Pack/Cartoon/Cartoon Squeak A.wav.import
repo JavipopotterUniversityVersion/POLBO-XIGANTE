@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://boa01cvs1mqa5"
+path="res://.godot/imported/Cartoon Squeak A.wav-0bdd15b61f8d1b931e30598d27b16743.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Comedy Sound FX Pack/Cartoon/Cartoon Squeak A.wav"
+dest_files=["res://.godot/imported/Cartoon Squeak A.wav-0bdd15b61f8d1b931e30598d27b16743.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dk1jat2jdgxjr"
+path="res://.godot/imported/Knob Shifting A.wav-1fd7269704d97d14fa1e7af59b55294f.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Knobs and Dials/Knob Shifting A.wav"
+dest_files=["res://.godot/imported/Knob Shifting A.wav-1fd7269704d97d14fa1e7af59b55294f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
