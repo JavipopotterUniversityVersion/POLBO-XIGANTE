@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://d1bamuwdotu6f"]
 
-[ext_resource type="Script" path="res://Scripts/PhotoMinigame.gd" id="1_4gjhm"]
+[ext_resource type="Script" uid="uid://clcddc1vfljob" path="res://Scripts/PhotoMinigame.gd" id="1_4gjhm"]
 [ext_resource type="Script" uid="uid://deq3pqhyfqwj2" path="res://Scripts/MinigameTimer.gd" id="2_o3c48"]
 [ext_resource type="Shader" uid="uid://d4n0dyr0ars7l" path="res://Shaders/dirt.gdshader" id="3_fangb"]
 [ext_resource type="Texture2D" uid="uid://dfncfv4f8u5ce" path="res://assets/sprites/icon.svg" id="4_o3c48"]
 [ext_resource type="Texture2D" uid="uid://bbvtgdx0l2gs2" path="res://assets/sprites/day.jpg" id="5_fangb"]
-[ext_resource type="Script" path="res://Scripts/PhotoClear.gd" id="6_fangb"]
+[ext_resource type="Script" uid="uid://bamj0np6p248a" path="res://Scripts/PhotoClear.gd" id="6_fangb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nb63l"]
 shader = ExtResource("3_fangb")
