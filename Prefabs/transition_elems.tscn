@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b3oka26upbeaw"]
+[gd_scene load_steps=18 format=3 uid="uid://b3oka26upbeaw"]
 
 [ext_resource type="Script" uid="uid://bidh7kv51pggd" path="res://Scripts/TransitionElems.gd" id="1_wv2l7"]
 [ext_resource type="Material" uid="uid://c03kju2yodtu0" path="res://Materials/transition_mat.tres" id="2_kuxo6"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://c75qb3ixqv1l4" path="res://assets/sprites/sastre_dance.png" id="6_udo8e"]
 [ext_resource type="Script" uid="uid://bc0w7igs835wk" path="res://Scripts/random_guille_jump.gd" id="7_d4up4"]
 [ext_resource type="PackedScene" uid="uid://c0p3wcxv1xqvp" path="res://Prefabs/guille.tscn" id="7_if2rt"]
+[ext_resource type="Shader" uid="uid://bt23shgtx7434" path="res://Shaders/wobbly.gdshader" id="10_njiug"]
+[ext_resource type="Texture2D" uid="uid://ctcqkkodyxdqp" path="res://assets/sprites/mais_rapido.png" id="11_loe5y"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wv2l7"]
 shader = ExtResource("2_r3wyl")
@@ -162,7 +164,19 @@ _data = {
 &"RESET": SubResource("Animation_if2rt")
 }
 
-[node name="TransitionElems" type="Control" node_paths=PackedStringArray("animations_container")]
+[sub_resource type="Gradient" id="Gradient_njiug"]
+offsets = PackedFloat32Array(0, 0.273775, 0.613833, 0.902017)
+colors = PackedColorArray(1, 0.585611, 0.524716, 1, 0.858595, 0.888776, 0, 1, 0, 1, 1, 1, 1, 0.804947, 0.977189, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fvf17"]
+shader = ExtResource("10_njiug")
+shader_parameter/interval = 0.07
+shader_parameter/timeDelay = 0.0
+shader_parameter/intensityX = 20.0
+shader_parameter/intensityY = 20.0
+shader_parameter/seed = 42.0
+
+[node name="TransitionElems" type="Control" node_paths=PackedStringArray("animations_container", "mais_rapido")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -173,6 +187,7 @@ script = ExtResource("1_wv2l7")
 trans_mat = ExtResource("2_kuxo6")
 transition_settings = Array[ExtResource("3_udo8e")]([ExtResource("4_if2rt")])
 animations_container = NodePath("animations")
+mais_rapido = NodePath("mais_rapido")
 
 [node name="background" type="Panel" parent="."]
 material = SubResource("ShaderMaterial_wv2l7")
@@ -226,6 +241,7 @@ grow_vertical = 2
 [node name="guilles" type="Node2D" parent="animations/jumps"]
 position = Vector2(-176, 507)
 script = ExtResource("7_d4up4")
+color_range = SubResource("Gradient_njiug")
 
 [node name="guille" parent="animations/jumps/guilles" instance=ExtResource("7_if2rt")]
 
@@ -277,6 +293,7 @@ position = Vector2(1378, 0)
 [node name="guilles2" type="Node2D" parent="animations/jumps"]
 position = Vector2(-116, 376)
 script = ExtResource("7_d4up4")
+color_range = SubResource("Gradient_njiug")
 
 [node name="guille" parent="animations/jumps/guilles2" instance=ExtResource("7_if2rt")]
 
@@ -328,6 +345,7 @@ position = Vector2(1378, 0)
 [node name="guilles3" type="Node2D" parent="animations/jumps"]
 position = Vector2(-186, 257)
 script = ExtResource("7_d4up4")
+color_range = SubResource("Gradient_njiug")
 
 [node name="guille" parent="animations/jumps/guilles3" instance=ExtResource("7_if2rt")]
 
@@ -379,6 +397,7 @@ position = Vector2(1378, 0)
 [node name="guilles4" type="Node2D" parent="animations/jumps"]
 position = Vector2(-86, 152)
 script = ExtResource("7_d4up4")
+color_range = SubResource("Gradient_njiug")
 
 [node name="guille" parent="animations/jumps/guilles4" instance=ExtResource("7_if2rt")]
 
@@ -430,6 +449,7 @@ position = Vector2(1378, 0)
 [node name="guilles5" type="Node2D" parent="animations/jumps"]
 position = Vector2(-196, 44)
 script = ExtResource("7_d4up4")
+color_range = SubResource("Gradient_njiug")
 
 [node name="guille" parent="animations/jumps/guilles5" instance=ExtResource("7_if2rt")]
 
@@ -481,6 +501,7 @@ position = Vector2(1378, 0)
 [node name="guilles6" type="Node2D" parent="animations/jumps"]
 position = Vector2(-86, -40)
 script = ExtResource("7_d4up4")
+color_range = SubResource("Gradient_njiug")
 
 [node name="guille" parent="animations/jumps/guilles6" instance=ExtResource("7_if2rt")]
 
@@ -538,3 +559,30 @@ offset_top = 43.0
 offset_right = -76.0
 offset_bottom = -74.0
 grow_vertical = 2
+
+[node name="mais_rapido" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="mais_rapido"]
+material = SubResource("ShaderMaterial_fvf17")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -371.0
+offset_top = 20.0
+offset_right = 449.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.33049
+texture = ExtResource("11_loe5y")
+expand_mode = 1
+stretch_mode = 5

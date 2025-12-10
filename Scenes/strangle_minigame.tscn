@@ -87,7 +87,7 @@ texture = ExtResource("4_nhtsw")
 [node name="GPUParticles2D" type="GPUParticles2D" parent="tentacle"]
 position = Vector2(-1.5, -1.06734)
 scale = Vector2(0.0294118, 0.0025413)
-amount = 64
+amount = 16
 texture = ExtResource("4_6povn")
 process_material = SubResource("ParticleProcessMaterial_1b2rl")
 
@@ -105,7 +105,6 @@ scale = Vector2(2, 2)
 texture = ExtResource("6_6fnpb")
 
 [node name="Axitar!!" parent="." instance=ExtResource("8_de2mu")]
-modulate = Color(1, 1, 1, 1)
 position = Vector2(80, 22)
 
 [connection signal="timeout" from="canvas_layer/control/timer" to="." method="finished"]

@@ -25,7 +25,9 @@ func start():
 			
 			transition_elems.fade()
 			await minigame.on_finished
-			transition_elems.unfade()
+			if available_games.size() == 0:
+				accelerate()
+			else: transition_elems.unfade()
 			
 			if not minigame.has_won():
 				AudioManager.play_sound("no")
@@ -36,8 +38,6 @@ func start():
 			await get_tree().create_timer(0.2).timeout
 			minigame.queue_free()
 			await get_tree().create_timer(transition_time).timeout
-			
-		accelerate()
 	win()
 
 func win():
@@ -55,3 +55,4 @@ func accelerate():
 	speed += 0.25
 	Engine.time_scale = speed
 	available_games = all_minigames.duplicate()
+	transition_elems.accelerate()

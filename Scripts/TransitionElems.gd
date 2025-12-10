@@ -6,11 +6,23 @@ class_name TransitionElems
 @export var animations_container:Node
 var animations:Array[Node]
 
+@export var mais_rapido:Control
+
 const TRANS_DURATION := 0.2
 var current_setting:TransitionSetting
 var current_anim
 
+func accelerate():
+	add_child(mais_rapido)
+	
+	current_setting = transition_settings.pick_random()
+	trans_mat.set_shader_parameter(&"mask_texture", current_setting.trans_mask)
+	
+	var tween = get_tree().create_tween();
+	tween.tween_method(set_shader_value, current_setting.final_progress, 0, TRANS_DURATION);
+
 func _ready() -> void:
+	remove_child(mais_rapido)
 	animations = animations_container.get_children()
 	for animation in animations:
 		animations_container.remove_child(animation)
@@ -25,7 +37,11 @@ func fade():
 	var tween = get_tree().create_tween();
 	tween.tween_method(set_shader_value, 0, current_setting.final_progress, TRANS_DURATION);
 	
-	animations_container.remove_child(current_anim)
+	if current_anim:
+		animations_container.remove_child(current_anim)
+		current_anim = null
+	else:
+		remove_child(mais_rapido)
 
 func set_shader_value(value: float):
 	trans_mat.set_shader_parameter(&"progress", value);
