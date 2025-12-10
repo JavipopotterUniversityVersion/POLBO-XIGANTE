@@ -54,7 +54,6 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="Axitar!!" parent="." instance=ExtResource("4_7kqor")]
-modulate = Color(1, 1, 1, 1)
 texture = ExtResource("5_hkv7m")
 
 [connection signal="timeout" from="canvas_layer/control/timer" to="." method="finished"]

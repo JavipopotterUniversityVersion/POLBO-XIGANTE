@@ -19,6 +19,7 @@ func _ready() -> void:
 		candles.push_back(candle)
 
 func on_turned_off(candle):
+	AudioManager.play_sound("whistle")
 	candles.erase(candle)
 	if candles.size() <= 0:
 		print("Candle Minigame Completed!")
