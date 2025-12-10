@@ -1,13 +1,25 @@
-[gd_scene load_steps=12 format=3 uid="uid://bhv2idnl3ow6e"]
+[gd_scene load_steps=18 format=3 uid="uid://bhv2idnl3ow6e"]
 
 [ext_resource type="Script" uid="uid://p8ft1du3jieh" path="res://Scripts/CountingMinigame.gd" id="1_wp87x"]
 [ext_resource type="PackedScene" uid="uid://b31ya55b7ttxa" path="res://Prefabs/timer.tscn" id="2_g42vc"]
+[ext_resource type="Shader" uid="uid://b2qh22b4xe6l4" path="res://Shaders/shaderDuroDeCojones.gdshader" id="2_tmkur"]
 [ext_resource type="Script" uid="uid://gdggawed12qc" path="res://Scripts/EmitOnClick.gd" id="3_g42vc"]
 [ext_resource type="Texture2D" uid="uid://cp4g6jhn4gxp0" path="res://assets/sprites/muller_enfadada.jpg" id="3_h33xa"]
+[ext_resource type="Texture2D" uid="uid://dqa5xttc63uop" path="res://assets/sprites/otramask.jpeg" id="3_vn300"]
 [ext_resource type="Texture2D" uid="uid://dutdnrdc5edim" path="res://assets/sprites/muller_golpeando.jpg" id="4_2ypk1"]
+[ext_resource type="Texture2D" uid="uid://dxnwlfplq1ci6" path="res://assets/sprites/bedroom_copy_free.jpg" id="4_ewlk6"]
 [ext_resource type="Script" uid="uid://bo3fqrr2w6f48" path="res://Scripts/PlayAnimation.gd" id="5_2ypk1"]
 [ext_resource type="Texture2D" uid="uid://df7gqjsv6a8a0" path="res://assets/sprites/neno_ledo.jpg" id="6_f7pcs"]
 [ext_resource type="Texture2D" uid="uid://da6dn4inq3tqp" path="res://assets/sprites/neno_triste.png" id="7_2yrhe"]
+[ext_resource type="PackedScene" uid="uid://cp2sgiff8xhpn" path="res://Prefabs/axitar!!.tscn" id="12_ewlk6"]
+[ext_resource type="Texture2D" uid="uid://biarbjhbst3fl" path="res://assets/sprites/Lambada.png" id="13_cdxd6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cdxd6"]
+shader = ExtResource("2_tmkur")
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 1.0
+shader_parameter/fps = 6.0
+shader_parameter/noise = ExtResource("3_vn300")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tmkur"]
 animations = [{
@@ -53,6 +65,11 @@ animations = [{
 [node name="LambadaMinigame" type="Node2D"]
 script = ExtResource("1_wp87x")
 count = 3
+
+[node name="BedroomCopyFree" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_cdxd6")
+scale = Vector2(1.69913, 1.01806)
+texture = ExtResource("4_ewlk6")
 
 [node name="canvas_layer" type="CanvasLayer" parent="."]
 
@@ -103,6 +120,9 @@ frame_progress = 0.977946
 script = ExtResource("5_2ypk1")
 animationName = "lambada"
 idle = "default"
+
+[node name="Axitar!!" parent="." instance=ExtResource("12_ewlk6")]
+texture = ExtResource("13_cdxd6")
 
 [connection signal="clicked" from="Neno" to="." method="freeOne"]
 [connection signal="clicked" from="Neno" to="Criada" method="playAnim"]

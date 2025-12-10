@@ -1,14 +1,29 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0ya6sol0b1hh"]
+[gd_scene load_steps=10 format=3 uid="uid://c0ya6sol0b1hh"]
 
-[ext_resource type="Script" uid="uid://b2746cpp60fjp" path="res://Scripts/candles_minigame.gd" id="1_hqba4"]
+[ext_resource type="Script" path="res://Scripts/candles_minigame.gd" id="1_hqba4"]
 [ext_resource type="PackedScene" uid="uid://cax7b2a2eexo7" path="res://Prefabs/CandlesMinigame/candle.tscn" id="1_u1wo2"]
+[ext_resource type="Shader" uid="uid://b2qh22b4xe6l4" path="res://Shaders/shaderDuroDeCojones.gdshader" id="2_1hr3p"]
+[ext_resource type="Texture2D" uid="uid://dg7ef6g1jrce2" path="res://assets/sprites/squares.jpg" id="3_c773h"]
 [ext_resource type="PackedScene" uid="uid://b31ya55b7ttxa" path="res://Prefabs/timer.tscn" id="3_whn5p"]
 [ext_resource type="PackedScene" uid="uid://cp2sgiff8xhpn" path="res://Prefabs/axitar!!.tscn" id="4_7kqor"]
+[ext_resource type="Texture2D" uid="uid://i6x74esrpcbf" path="res://assets/sprites/room_copy_free.png" id="4_eq36x"]
 [ext_resource type="Texture2D" uid="uid://brbe7xy2ocam4" path="res://assets/sprites/soprar.png" id="5_hkv7m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rwsfq"]
+shader = ExtResource("2_1hr3p")
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 1.0
+shader_parameter/fps = 6.0
+shader_parameter/noise = ExtResource("3_c773h")
 
 [node name="CandlesMinigame" type="Node2D" node_paths=PackedStringArray("candle_nodes")]
 script = ExtResource("1_hqba4")
 candle_nodes = [NodePath("candle"), NodePath("candle2"), NodePath("candle3"), NodePath("candle4"), NodePath("candle5"), NodePath("candle7")]
+
+[node name="RoomCopyFree" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_rwsfq")
+scale = Vector2(1.28125, 1.30987)
+texture = ExtResource("4_eq36x")
 
 [node name="candle" parent="." instance=ExtResource("1_u1wo2")]
 position = Vector2(-45, 110)

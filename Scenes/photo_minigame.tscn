@@ -1,11 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://d1bamuwdotu6f"]
+[gd_scene load_steps=12 format=3 uid="uid://cokr5a7fxspbb"]
 
 [ext_resource type="Script" path="res://Scripts/PhotoMinigame.gd" id="1_4gjhm"]
 [ext_resource type="Script" uid="uid://deq3pqhyfqwj2" path="res://Scripts/MinigameTimer.gd" id="2_o3c48"]
-[ext_resource type="Shader" uid="uid://d4n0dyr0ars7l" path="res://Shaders/dirt.gdshader" id="3_fangb"]
+[ext_resource type="Shader" path="res://Shaders/dirt.gdshader" id="3_fangb"]
 [ext_resource type="Texture2D" uid="uid://dfncfv4f8u5ce" path="res://assets/sprites/icon.svg" id="4_o3c48"]
 [ext_resource type="Texture2D" uid="uid://bbvtgdx0l2gs2" path="res://assets/sprites/day.jpg" id="5_fangb"]
 [ext_resource type="Script" path="res://Scripts/PhotoClear.gd" id="6_fangb"]
+[ext_resource type="PackedScene" uid="uid://cp2sgiff8xhpn" path="res://Prefabs/axitar!!.tscn" id="7_ajvxf"]
+[ext_resource type="Texture2D" uid="uid://rcku6nq57f36" path="res://assets/sprites/frotar.png" id="8_2rsjc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nb63l"]
 shader = ExtResource("3_fangb")
@@ -59,6 +61,9 @@ script = ExtResource("6_fangb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="photo/Area2D"]
 position = Vector2(-3.1665e-08, 0.00939457)
 shape = SubResource("RectangleShape2D_nb63l")
+
+[node name="Axitar!!" parent="." instance=ExtResource("7_ajvxf")]
+texture = ExtResource("8_2rsjc")
 
 [connection signal="timeout" from="canvas_layer/control/timer" to="." method="finished"]
 [connection signal="completed" from="photo" to="." method="succed"]
