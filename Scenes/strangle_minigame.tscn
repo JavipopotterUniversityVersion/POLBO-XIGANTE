@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://tigixn6xylsa"]
+[gd_scene load_steps=17 format=3 uid="uid://tigixn6xylsa"]
 
 [ext_resource type="Script" uid="uid://d0daruy3r65sd" path="res://Scripts/Minigame.gd" id="1_bm5vv"]
 [ext_resource type="Script" uid="uid://deq3pqhyfqwj2" path="res://Scripts/MinigameTimer.gd" id="2_nkf4n"]
@@ -6,8 +6,10 @@
 [ext_resource type="Shader" uid="uid://1gj0b2tvuj2m" path="res://Shaders/outline.gdshader" id="3_nhtsw"]
 [ext_resource type="Texture2D" uid="uid://ck68jx8h1fhwi" path="res://assets/sprites/particles/sweat.png" id="4_6povn"]
 [ext_resource type="Texture2D" uid="uid://bys6upkwjcqmm" path="res://assets/sprites/tentaculo agarrando tío.png" id="4_nhtsw"]
-[ext_resource type="Texture2D" uid="uid://cx05w0h1ntrgb" path="res://assets/sprites/galisia.jpg" id="6_6fnpb"]
+[ext_resource type="Shader" uid="uid://b2qh22b4xe6l4" path="res://Shaders/shaderDuroDeCojones.gdshader" id="7_22eiw"]
+[ext_resource type="Texture2D" uid="uid://cl7sregypcs6q" path="res://assets/sprites/maskDuraDeCojones.jpg" id="8_38e7a"]
 [ext_resource type="PackedScene" uid="uid://cp2sgiff8xhpn" path="res://Prefabs/axitar!!.tscn" id="8_de2mu"]
+[ext_resource type="Texture2D" uid="uid://c7iy62r6k2kwx" path="res://assets/sprites/mar_copy_free.jpg" id="8_po6pr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_de2mu"]
 shader = ExtResource("3_nhtsw")
@@ -29,6 +31,16 @@ initial_velocity_min = 273.89
 initial_velocity_max = 331.21
 gravity = Vector3(0, 200, 0)
 alpha_curve = SubResource("CurveTexture_1b2rl")
+
+[sub_resource type="GDScript" id="GDScript_38e7a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yryk2"]
+shader = ExtResource("7_22eiw")
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 1.0
+shader_parameter/fps = 6.0
+shader_parameter/noise = ExtResource("8_38e7a")
+script = SubResource("GDScript_38e7a")
 
 [node name="StrangleMinigame" type="Node2D"]
 script = ExtResource("1_bm5vv")
@@ -100,12 +112,12 @@ skew = 0.0818932
 
 [node name="Galisia" type="Sprite2D" parent="."]
 z_index = -1
+material = SubResource("ShaderMaterial_yryk2")
 position = Vector2(50, -5)
 scale = Vector2(2, 2)
-texture = ExtResource("6_6fnpb")
+texture = ExtResource("8_po6pr")
 
 [node name="Axitar!!" parent="." instance=ExtResource("8_de2mu")]
-modulate = Color(1, 1, 1, 1)
 position = Vector2(80, 22)
 
 [connection signal="timeout" from="canvas_layer/control/timer" to="." method="finished"]
