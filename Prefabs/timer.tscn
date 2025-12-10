@@ -8,5 +8,6 @@ offset_top = 598.0
 offset_right = 1124.0
 offset_bottom = 625.0
 max_value = 1.0
+step = 0.1
 show_percentage = false
 script = ExtResource("1_onc7o")
