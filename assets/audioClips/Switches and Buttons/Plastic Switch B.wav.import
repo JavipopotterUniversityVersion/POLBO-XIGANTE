@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://hcu4ffv38mrx"
+path="res://.godot/imported/Plastic Switch B.wav-43b65465d667d7351ce72b42e2d579ed.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Switches and Buttons/Plastic Switch B.wav"
+dest_files=["res://.godot/imported/Plastic Switch B.wav-43b65465d667d7351ce72b42e2d579ed.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

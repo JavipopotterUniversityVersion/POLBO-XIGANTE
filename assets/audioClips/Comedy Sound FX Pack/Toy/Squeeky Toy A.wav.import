@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://e5wottq0qw2w"
+path="res://.godot/imported/Squeeky Toy A.wav-96cee815bdc7becbcc86abc072a259db.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Comedy Sound FX Pack/Toy/Squeeky Toy A.wav"
+dest_files=["res://.godot/imported/Squeeky Toy A.wav-96cee815bdc7becbcc86abc072a259db.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://byyc7a70vqfjq"
+path="res://.godot/imported/Windy Mechanism Dials C.wav-4709064c1f6d31166311195cc790786e.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Knobs and Dials/Windy Mechanism Dials C.wav"
+dest_files=["res://.godot/imported/Windy Mechanism Dials C.wav-4709064c1f6d31166311195cc790786e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

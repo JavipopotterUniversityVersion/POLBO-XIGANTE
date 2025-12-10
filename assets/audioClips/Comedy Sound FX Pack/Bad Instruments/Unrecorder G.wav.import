@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cn1cnt8t2d7r"
+path="res://.godot/imported/Unrecorder G.wav-d26176beae92522aa06207d967cb6918.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Comedy Sound FX Pack/Bad Instruments/Unrecorder G.wav"
+dest_files=["res://.godot/imported/Unrecorder G.wav-d26176beae92522aa06207d967cb6918.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

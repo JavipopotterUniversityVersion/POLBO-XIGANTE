@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://5j2ol4uotv1h"
+path="res://.godot/imported/Cartoon Crash A.wav-913847e07598ee8cc177c2ceeb4b15c9.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Comedy Sound FX Pack/Cartoon/Cartoon Crash A.wav"
+dest_files=["res://.godot/imported/Cartoon Crash A.wav-913847e07598ee8cc177c2ceeb4b15c9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

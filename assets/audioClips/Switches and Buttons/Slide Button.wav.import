@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dogdlvj4tha01"
+path="res://.godot/imported/Slide Button.wav-e4ec4847775d221143c19535a8c409bd.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Switches and Buttons/Slide Button.wav"
+dest_files=["res://.godot/imported/Slide Button.wav-e4ec4847775d221143c19535a8c409bd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

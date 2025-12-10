@@ -16,6 +16,8 @@ var current_dist:float
 var guy_last_pos:Vector2
 var initial_rot
 
+var wawaing:bool = false
+
 func _ready() -> void:
 	initial_rot = rotation
 	progress_bar.max_value = target_dist
@@ -36,5 +38,15 @@ func _process(delta: float) -> void:
 	
 	progress_bar.value = current_dist
 	
+	if new_dist > 50:
+		wawa_sound()
+	
 	if target_dist < current_dist:
 		minigame.succed()
+
+func wawa_sound():
+	if wawaing: return
+	wawaing = true
+	await get_tree().create_timer(0.1).timeout
+	wawaing = false
+	AudioManager.play_sound("wawa")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://betkxdcltwvxk"
+path="res://.godot/imported/Sci-Fi Scroll A.wav-6bedfe09f56fab6558e90f68729b4a19.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Glitches and Distortions/Sci-Fi Scroll A.wav"
+dest_files=["res://.godot/imported/Sci-Fi Scroll A.wav-6bedfe09f56fab6558e90f68729b4a19.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

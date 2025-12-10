@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b21wmnv2oohuf"
+path="res://.godot/imported/Sick Elephant A.wav-f09ce0d9b8ea5ee016377f9e01a0c6a7.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Comedy Sound FX Pack/Circus/Sick Elephant A.wav"
+dest_files=["res://.godot/imported/Sick Elephant A.wav-f09ce0d9b8ea5ee016377f9e01a0c6a7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

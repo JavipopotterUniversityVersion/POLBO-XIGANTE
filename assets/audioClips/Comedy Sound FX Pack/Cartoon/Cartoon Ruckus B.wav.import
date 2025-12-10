@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cp7nsnbynk7xl"
+path="res://.godot/imported/Cartoon Ruckus B.wav-fba9369a6d8b32957e7c5c00df0b97b4.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Comedy Sound FX Pack/Cartoon/Cartoon Ruckus B.wav"
+dest_files=["res://.godot/imported/Cartoon Ruckus B.wav-fba9369a6d8b32957e7c5c00df0b97b4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

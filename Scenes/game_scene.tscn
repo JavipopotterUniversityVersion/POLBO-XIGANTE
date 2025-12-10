@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cdrpbmhvc0s4j" path="res://Scripts/Lives.gd" id="2_b6fju"]
 [ext_resource type="PackedScene" uid="uid://c0ya6sol0b1hh" path="res://Scenes/candles_minigame.tscn" id="4_fiftr"]
 [ext_resource type="PackedScene" uid="uid://xidq3nsyt43u" path="res://Scenes/octopus_costume_minigame.tscn" id="5_1ixah"]
-[ext_resource type="PackedScene" uid="uid://d1bamuwdotu6f" path="res://Scenes/photo_minigame.tscn" id="6_2fmhe"]
+[ext_resource type="PackedScene" uid="uid://cokr5a7fxspbb" path="res://Scenes/photo_minigame.tscn" id="6_2fmhe"]
 [ext_resource type="PackedScene" uid="uid://tigixn6xylsa" path="res://Scenes/strangle_minigame.tscn" id="6_rgj8m"]
 
 [sub_resource type="Environment" id="Environment_6h5vk"]

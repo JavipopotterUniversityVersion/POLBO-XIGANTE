@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://n303bg0yo5e7"
+path="res://.godot/imported/Comedy Fling A.wav-5a620515096370cb05bbe8e7046330ac.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Comedy Sound FX Pack/Comedy/Comedy Fling A.wav"
+dest_files=["res://.godot/imported/Comedy Fling A.wav-5a620515096370cb05bbe8e7046330ac.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

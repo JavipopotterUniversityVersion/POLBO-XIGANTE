@@ -1,8 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://chjstfmwyk42i"]
+[gd_scene load_steps=8 format=3 uid="uid://chjstfmwyk42i"]
 
 [ext_resource type="Script" uid="uid://nyx0urel3ud5" path="res://Scripts/audio_manager.gd" id="1_203tp"]
 [ext_resource type="AudioStream" uid="uid://dlkpgo6gdcjsy" path="res://assets/audioClips/si.wav" id="2_ga8lj"]
 [ext_resource type="AudioStream" uid="uid://cjedtwacnsnbu" path="res://assets/audioClips/no.wav" id="3_rgjcj"]
+[ext_resource type="AudioStream" uid="uid://dt74vdqp21y3n" path="res://assets/audioClips/wawwawa.wav" id="4_rgjcj"]
+[ext_resource type="AudioStream" uid="uid://bxv2wo4dxm1xj" path="res://assets/audioClips/Comedy Sound FX Pack/Circus/Silly Whistle B.wav" id="5_y6pob"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_rgjcj"]
+random_pitch = 1.05
+streams_count = 1
+stream_0/stream = ExtResource("4_rgjcj")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_s84qc"]
+random_pitch = 1.1
+streams_count = 1
+stream_0/stream = ExtResource("5_y6pob")
 
 [node name="audio_manager" type="Node"]
 script = ExtResource("1_203tp")
@@ -12,3 +24,10 @@ stream = ExtResource("2_ga8lj")
 
 [node name="no" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_rgjcj")
+
+[node name="wawa" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_rgjcj")
+
+[node name="whistle" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_s84qc")
+max_polyphony = 5

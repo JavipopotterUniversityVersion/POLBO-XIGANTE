@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://1bg4f6iobxa7"
+path="res://.godot/imported/Cashier Button.wav-c0e99849f02e1dfa74f81b0732f8da64.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Switches and Buttons/Cashier Button.wav"
+dest_files=["res://.godot/imported/Cashier Button.wav-c0e99849f02e1dfa74f81b0732f8da64.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

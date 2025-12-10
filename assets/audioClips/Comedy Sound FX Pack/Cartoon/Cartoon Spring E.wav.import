@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://6wvdshvw3n4"
+path="res://.godot/imported/Cartoon Spring E.wav-5eef06aed37b2b8f6827168385ebd5cb.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Comedy Sound FX Pack/Cartoon/Cartoon Spring E.wav"
+dest_files=["res://.godot/imported/Cartoon Spring E.wav-5eef06aed37b2b8f6827168385ebd5cb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

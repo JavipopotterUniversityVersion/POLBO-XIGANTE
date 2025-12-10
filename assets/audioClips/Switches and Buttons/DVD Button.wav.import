@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cptf142ij2x8f"
+path="res://.godot/imported/DVD Button.wav-0ed78a9f424ae29db723e7ce5910a650.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Switches and Buttons/DVD Button.wav"
+dest_files=["res://.godot/imported/DVD Button.wav-0ed78a9f424ae29db723e7ce5910a650.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

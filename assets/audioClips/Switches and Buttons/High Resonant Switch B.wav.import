@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://baoletevwsbaf"
+path="res://.godot/imported/High Resonant Switch B.wav-49c39e212630ab00e5492397f8c81729.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Switches and Buttons/High Resonant Switch B.wav"
+dest_files=["res://.godot/imported/High Resonant Switch B.wav-49c39e212630ab00e5492397f8c81729.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

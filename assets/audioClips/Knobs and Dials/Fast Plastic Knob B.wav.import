@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cvmebq5has8c3"
+path="res://.godot/imported/Fast Plastic Knob B.wav-5f47fd8015d9eec3e8bf71c87a723991.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Knobs and Dials/Fast Plastic Knob B.wav"
+dest_files=["res://.godot/imported/Fast Plastic Knob B.wav-5f47fd8015d9eec3e8bf71c87a723991.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dh6wrqrca7k20"
+path="res://.godot/imported/Comedy Machine E.wav-5014437e35d8cc6a88e708f61c8c8c71.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Comedy Sound FX Pack/Comedy/Comedy Machine E.wav"
+dest_files=["res://.godot/imported/Comedy Machine E.wav-5014437e35d8cc6a88e708f61c8c8c71.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

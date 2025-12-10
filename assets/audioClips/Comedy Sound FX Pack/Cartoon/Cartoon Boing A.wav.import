@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dro6ecvrpa3it"
+path="res://.godot/imported/Cartoon Boing A.wav-6b8ce3b46c1bfb51429072ef4d2082ab.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Comedy Sound FX Pack/Cartoon/Cartoon Boing A.wav"
+dest_files=["res://.godot/imported/Cartoon Boing A.wav-6b8ce3b46c1bfb51429072ef4d2082ab.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

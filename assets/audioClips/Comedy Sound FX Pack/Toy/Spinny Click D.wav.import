@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bwsrpnxsbb1tx"
+path="res://.godot/imported/Spinny Click D.wav-dcb862ac0b86c2bda5330c393610aaa0.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Comedy Sound FX Pack/Toy/Spinny Click D.wav"
+dest_files=["res://.godot/imported/Spinny Click D.wav-dcb862ac0b86c2bda5330c393610aaa0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
