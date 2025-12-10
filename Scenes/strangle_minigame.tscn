@@ -6,7 +6,7 @@
 [ext_resource type="Shader" uid="uid://1gj0b2tvuj2m" path="res://Shaders/outline.gdshader" id="3_nhtsw"]
 [ext_resource type="Texture2D" uid="uid://ck68jx8h1fhwi" path="res://assets/sprites/particles/sweat.png" id="4_6povn"]
 [ext_resource type="Texture2D" uid="uid://bys6upkwjcqmm" path="res://assets/sprites/tentaculo agarrando tío.png" id="4_nhtsw"]
-[ext_resource type="Shader" uid="uid://b2qh22b4xe6l4" path="res://Shaders/shaderDuroDeCojones.gdshader" id="7_22eiw"]
+[ext_resource type="Shader" path="res://Shaders/shaderDuroDeCojones.gdshader" id="7_22eiw"]
 [ext_resource type="Texture2D" uid="uid://cl7sregypcs6q" path="res://assets/sprites/maskDuraDeCojones.jpg" id="8_38e7a"]
 [ext_resource type="PackedScene" uid="uid://cp2sgiff8xhpn" path="res://Prefabs/axitar!!.tscn" id="8_de2mu"]
 [ext_resource type="Texture2D" uid="uid://c7iy62r6k2kwx" path="res://assets/sprites/mar_copy_free.jpg" id="8_po6pr"]
