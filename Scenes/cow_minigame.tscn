@@ -1,14 +1,40 @@
-[gd_scene load_steps=8 format=3 uid="uid://cl27f3ae3talg"]
+[gd_scene load_steps=18 format=3 uid="uid://cl27f3ae3talg"]
 
-[ext_resource type="Script" path="res://Scripts/CowMinigame.gd" id="1_5oqxu"]
+[ext_resource type="Script" uid="uid://8hxp7yeh7pgk" path="res://Scripts/CowMinigame.gd" id="1_5oqxu"]
 [ext_resource type="Script" uid="uid://deq3pqhyfqwj2" path="res://Scripts/MinigameTimer.gd" id="2_4xoit"]
 [ext_resource type="Texture2D" uid="uid://b4tprkou5qai0" path="res://assets/sprites/cabexa pilpo enfadado.png" id="3_60jee"]
 [ext_resource type="Texture2D" uid="uid://drcbdngmgh1fc" path="res://assets/sprites/vaca.png" id="4_itybt"]
-[ext_resource type="Texture2D" uid="uid://bys6upkwjcqmm" path="res://assets/sprites/tentaculo agarrando tío.png" id="5_asvv8"]
-[ext_resource type="Script" path="res://Scripts/pull_Zone.gd" id="6_5oqxu"]
+[ext_resource type="Texture2D" uid="uid://dlooixsleg8g8" path="res://assets/sprites/metro.png" id="5_4xoit"]
+[ext_resource type="Script" uid="uid://c6eak82j7dyip" path="res://Scripts/pull_Zone.gd" id="6_5oqxu"]
+[ext_resource type="Shader" uid="uid://b2qh22b4xe6l4" path="res://Shaders/shaderDuroDeCojones.gdshader" id="6_cx2na"]
+[ext_resource type="Shader" uid="uid://bpdaxjt80hodp" path="res://Shaders/vignette.gdshader" id="6_ewwtb"]
+[ext_resource type="Texture2D" uid="uid://cl7sregypcs6q" path="res://assets/sprites/maskDuraDeCojones.jpg" id="7_dhjtv"]
+[ext_resource type="Texture2D" uid="uid://dxv11csah6qbf" path="res://assets/sprites/particles/elmetrometroso.png" id="8_ewwtb"]
+[ext_resource type="Texture2D" uid="uid://c7iy62r6k2kwx" path="res://assets/sprites/mar_copy_free.jpg" id="8_hygps"]
+[ext_resource type="Texture2D" uid="uid://b5awqk2hspc4" path="res://assets/sprites/metroDeDndodesale.png" id="8_q50l6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5oqxu"]
 size = Vector2(45, 122)
+
+[sub_resource type="GDScript" id="GDScript_38e7a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_45pb4"]
+shader = ExtResource("6_cx2na")
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 1.0
+shader_parameter/fps = 6.0
+shader_parameter/noise = ExtResource("7_dhjtv")
+script = SubResource("GDScript_38e7a")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ocnb0"]
+shader = ExtResource("6_ewwtb")
+shader_parameter/radius = 0.22
+shader_parameter/softness = 0.38
+shader_parameter/intensity = 2.0
+shader_parameter/contrast = 2.2
+shader_parameter/vignette_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q50l6"]
 
 [node name="cowMinigame" type="Node2D"]
 script = ExtResource("1_5oqxu")
@@ -36,37 +62,93 @@ show_percentage = false
 script = ExtResource("2_4xoit")
 metadata/_edit_use_anchors_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-6, -2)
+[node name="pulpo" type="Sprite2D" parent="canvas_layer"]
+position = Vector2(566.73, 340.8)
 scale = Vector2(0.245, 0.245)
 texture = ExtResource("3_60jee")
 
-[node name="cows" type="Sprite2D" parent="."]
-texture_repeat = 2
-position = Vector2(-536, 296)
-rotation = -1.5708
-scale = Vector2(0.065, 0.039)
-texture = ExtResource("4_itybt")
-centered = false
-offset = Vector2(47.6479, 261.566)
-region_rect = Rect2(168.682, 217.278, 2174.57, 2930.5)
-
-[node name="pullZone" type="Area2D" parent="." node_paths=PackedStringArray("cows", "goal")]
-position = Vector2(-386.035, 198.115)
+[node name="pullZone" type="Area2D" parent="canvas_layer" node_paths=PackedStringArray("cows", "goal")]
+z_index = 5
+y_sort_enabled = true
+position = Vector2(148.73, 540.8)
 script = ExtResource("6_5oqxu")
-cows = NodePath("../cows")
+cows = NodePath("../../CanvasLayer/Control/cow")
 goal = NodePath("../goal")
 
-[node name="pullZoneSprite" type="Sprite2D" parent="pullZone"]
+[node name="pullZoneSprite" type="Sprite2D" parent="canvas_layer/pullZone"]
+z_index = 5
 position = Vector2(-3.05176e-05, 3.05176e-05)
-scale = Vector2(0.0185483, 0.0481755)
-texture = ExtResource("5_asvv8")
+rotation = 3.14159
+scale = Vector2(0.309, 0.781)
+texture = ExtResource("5_4xoit")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="pullZone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="canvas_layer/pullZone"]
 shape = SubResource("RectangleShape2D_5oqxu")
 
-[node name="goal" type="Node2D" parent="."]
-position = Vector2(336, 200)
+[node name="Galisia" type="Sprite2D" parent="canvas_layer"]
+z_index = -1
+material = SubResource("ShaderMaterial_45pb4")
+position = Vector2(555, 290)
+scale = Vector2(2, 2)
+texture = ExtResource("8_hygps")
+
+[node name="goal" type="Node2D" parent="canvas_layer"]
+position = Vector2(908, 523)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_ocnb0")
+layout_mode = 3
+anchors_preset = 0
+offset_left = -4.0
+offset_top = 6.0
+offset_right = 36.0
+offset_bottom = 46.0
+scale = Vector2(0.05, 0.05)
+mouse_filter = 2
+
+[node name="cow" type="TextureRect" parent="CanvasLayer/Control"]
+z_as_relative = false
+y_sort_enabled = true
+texture_repeat = 2
+material = SubResource("CanvasItemMaterial_q50l6")
+clip_contents = true
+custom_minimum_size = Vector2(0, 19.84)
+layout_direction = 2
+offset_left = 180.0
+offset_top = 11800.0
+offset_right = 2660.0
+offset_bottom = 15326.3
+rotation = -1.5708
+texture = ExtResource("4_itybt")
+expand_mode = 4
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/cow"]
+visible = false
+layout_mode = 0
+offset_left = -140.001
+offset_top = -1280.0
+offset_right = -89.3255
+offset_bottom = 2719.62
+scale = Vector2(58.332, 5.974)
+texture = ExtResource("8_ewwtb")
+expand_mode = 4
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+z_index = 12
+z_as_relative = false
+y_sort_enabled = true
+layout_mode = 0
+offset_left = 100.0
+offset_top = 7700.0
+offset_right = 1850.0
+offset_bottom = 8940.0
+scale = Vector2(5.1161, 4.79574)
+texture = ExtResource("8_q50l6")
 
 [connection signal="timeout" from="canvas_layer/control/timer" to="." method="finished"]
-[connection signal="completed" from="pullZone" to="." method="succed"]
+[connection signal="completed" from="canvas_layer/pullZone" to="." method="succed"]
