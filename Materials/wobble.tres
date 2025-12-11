@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://be2qf0f5sv5sh"]
+
+[ext_resource type="Shader" uid="uid://bt23shgtx7434" path="res://Shaders/wobbly.gdshader" id="1_6u828"]
+
+[resource]
+shader = ExtResource("1_6u828")
+shader_parameter/interval = 0.1
+shader_parameter/timeDelay = 0.0
+shader_parameter/intensityX = 40.0
+shader_parameter/intensityY = 40.0
+shader_parameter/seed = 42.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b3oka26upbeaw"]
+[gd_scene load_steps=21 format=3 uid="uid://b3oka26upbeaw"]
 
 [ext_resource type="Script" uid="uid://bidh7kv51pggd" path="res://Scripts/TransitionElems.gd" id="1_wv2l7"]
 [ext_resource type="Material" uid="uid://c03kju2yodtu0" path="res://Materials/transition_mat.tres" id="2_kuxo6"]
@@ -175,6 +175,45 @@ shader_parameter/timeDelay = 0.0
 shader_parameter/intensityX = 20.0
 shader_parameter/intensityY = 20.0
 shader_parameter/seed = 42.0
+
+[sub_resource type="Animation" id="Animation_njiug"]
+resource_name = "woo"
+length = 0.4
+loop_mode = 2
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(205, 344), Vector2(109, 282)]
+}
+
+[sub_resource type="Animation" id="Animation_loe5y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(205, 344)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fvf17"]
+_data = {
+&"RESET": SubResource("Animation_loe5y"),
+&"woo": SubResource("Animation_njiug")
+}
 
 [node name="TransitionElems" type="Control" node_paths=PackedStringArray("animations_container", "mais_rapido")]
 layout_mode = 3
@@ -576,13 +615,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -371.0
-offset_top = 20.0
-offset_right = 449.0
-offset_bottom = 180.0
+offset_left = -386.792
+offset_top = 9.80103
+offset_right = 471.563
+offset_bottom = 218.493
 grow_horizontal = 2
 grow_vertical = 2
 rotation = -0.33049
 texture = ExtResource("11_loe5y")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="animation" type="AnimationPlayer" parent="mais_rapido"]
+libraries = {
+&"": SubResource("AnimationLibrary_fvf17")
+}
+autoplay = "woo"

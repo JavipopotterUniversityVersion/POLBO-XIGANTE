@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c0ya6sol0b1hh"]
+[gd_scene load_steps=25 format=3 uid="uid://c0ya6sol0b1hh"]
 
 [ext_resource type="Script" uid="uid://b2746cpp60fjp" path="res://Scripts/candles_minigame.gd" id="1_hqba4"]
 [ext_resource type="PackedScene" uid="uid://cax7b2a2eexo7" path="res://Prefabs/CandlesMinigame/candle.tscn" id="1_u1wo2"]
@@ -10,6 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://de1nvnp7oolaw" path="res://assets/sprites/mesa.png" id="5_c773h"]
 [ext_resource type="Shader" uid="uid://bt23shgtx7434" path="res://Shaders/wobbly.gdshader" id="5_eq36x"]
 [ext_resource type="Texture2D" uid="uid://brbe7xy2ocam4" path="res://assets/sprites/soprar.png" id="5_hkv7m"]
+[ext_resource type="Shader" uid="uid://t8tkm18op2v" path="res://Shaders/crt.gdshader" id="11_b1n80"]
+[ext_resource type="Texture2D" uid="uid://dhn3q24qa3u00" path="res://assets/sprites/heart.png" id="12_b1n80"]
+[ext_resource type="Texture2D" uid="uid://c0rvetb8n77mp" path="res://assets/sprites/felis.png" id="12_slac0"]
+[ext_resource type="Script" uid="uid://b42yrvbbtdpsw" path="res://Scripts/play_particles.gd" id="13_slac0"]
+[ext_resource type="Texture2D" uid="uid://dfncfv4f8u5ce" path="res://assets/sprites/icon.svg" id="15_o7cjh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rwsfq"]
 shader = ExtResource("2_1hr3p")
@@ -18,6 +23,26 @@ shader_parameter/strength = 1.0
 shader_parameter/fps = 6.0
 shader_parameter/noise = ExtResource("3_c773h")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_upn32"]
+shader = ExtResource("11_b1n80")
+shader_parameter/grain_intensity = 0.78
+shader_parameter/min_lum = 0.0
+shader_parameter/max_lum = 0.9
+shader_parameter/time_scale = 0.5
+shader_parameter/vignette_darkness = 0.0
+shader_parameter/vignette_outer_radius = 0.7
+shader_parameter/vignette_inner_radius = 0.2
+shader_parameter/scanline_intensity = 0.0
+shader_parameter/barrel_distortion = 0.349
+shader_parameter/chromatic_aberration = 0.005
+shader_parameter/crt_vignette_power = 0.536
+shader_parameter/pixel_resolution_x = 640
+shader_parameter/pixel_resolution_y = 480
+shader_parameter/enable_color_quantization = true
+shader_parameter/color_quant_steps = 11.448
+shader_parameter/warble_amount = 0.002
+shader_parameter/warble_speed = 5.0
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b1n80"]
 shader = ExtResource("5_eq36x")
 shader_parameter/interval = 0.1
@@ -25,6 +50,65 @@ shader_parameter/timeDelay = 0.0
 shader_parameter/intensityX = 0.5
 shader_parameter/intensityY = 0.5
 shader_parameter/seed = 42.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_rwsfq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hwf74"]
+shader = ExtResource("2_1hr3p")
+shader_parameter/scale = Vector2(5, 5)
+shader_parameter/strength = 0.25
+shader_parameter/fps = 64.0
+shader_parameter/noise = SubResource("NoiseTexture2D_rwsfq")
+
+[sub_resource type="Animation" id="Animation_b1n80"]
+resource_name = "a"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-23, 728), Vector2(-23, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_slac0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-23, 728)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hwf74"]
+_data = {
+&"RESET": SubResource("Animation_slac0"),
+&"a": SubResource("Animation_b1n80")
+}
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_slac0"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(800, 1, 1)
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 293.0
+initial_velocity_max = 609.94
+angular_velocity_min = -70.0
+angular_velocity_max = 70.0
+gravity = Vector3(0, 400, 0)
+hue_variation_min = -1.0
+hue_variation_max = 1.0
 
 [node name="CandlesMinigame" type="Node2D" node_paths=PackedStringArray("candle_nodes")]
 script = ExtResource("1_hqba4")
@@ -35,6 +119,13 @@ intensity = 0.5
 material = SubResource("ShaderMaterial_rwsfq")
 scale = Vector2(1.28125, 1.30987)
 texture = ExtResource("4_eq36x")
+
+[node name="Sprite2D" type="Sprite2D" parent="RoomCopyFree"]
+visible = false
+material = SubResource("ShaderMaterial_upn32")
+position = Vector2(-7.02437, -2.29028)
+scale = Vector2(7.60976, 5.52297)
+texture = ExtResource("15_o7cjh")
 
 [node name="Mesa" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_b1n80")
@@ -88,4 +179,27 @@ grow_vertical = 0
 [node name="Axitar!!" parent="." instance=ExtResource("4_7kqor")]
 texture = ExtResource("5_hkv7m")
 
+[node name="Felis" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_hwf74")
+position = Vector2(-23, 728)
+texture = ExtResource("12_slac0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Felis"]
+libraries = {
+&"": SubResource("AnimationLibrary_hwf74")
+}
+
+[node name="confeti" type="GPUParticles2D" parent="."]
+position = Vector2(11, 371)
+emitting = false
+amount = 64
+texture = ExtResource("12_b1n80")
+lifetime = 5.0
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_slac0")
+script = ExtResource("13_slac0")
+
+[connection signal="on_sucess" from="." to="confeti" method="play"]
+[connection signal="on_sucess" from="." to="Felis/AnimationPlayer" method="play" binds= [&"a"]]
 [connection signal="timeout" from="canvas_layer/control/timer" to="." method="finished"]

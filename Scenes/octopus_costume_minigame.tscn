@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://xidq3nsyt43u"]
+[gd_scene load_steps=18 format=3 uid="uid://xidq3nsyt43u"]
 
 [ext_resource type="Script" uid="uid://p8ft1du3jieh" path="res://Scripts/CountingMinigame.gd" id="1_netmy"]
 [ext_resource type="Shader" uid="uid://b2qh22b4xe6l4" path="res://Shaders/shaderDuroDeCojones.gdshader" id="2_88mxi"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c6r0p166ytn5a" path="res://assets/sprites/octopus_minigame/brazo derecho.png" id="5_ets8c"]
 [ext_resource type="Texture2D" uid="uid://c62i6u7m0ov73" path="res://assets/sprites/octopus_minigame/pierna protesis izq.png" id="6_s2jm4"]
 [ext_resource type="Texture2D" uid="uid://h2718di54tpf" path="res://assets/sprites/octopus_minigame/pierna protesis derecha.png" id="7_30h1r"]
+[ext_resource type="Material" uid="uid://be2qf0f5sv5sh" path="res://Materials/wobble.tres" id="7_kkw2e"]
 [ext_resource type="Texture2D" uid="uid://dwgxd8032145x" path="res://assets/sprites/octopus_minigame/cabeza.png" id="8_88mxi"]
 [ext_resource type="Texture2D" uid="uid://ce7j1no5vbe3x" path="res://assets/sprites/octopus_minigame/brazo izquierdo.png" id="9_wdlhe"]
 [ext_resource type="Texture2D" uid="uid://dbvgqdipqqce5" path="res://assets/sprites/octopus_minigame/sastredesnudo.png" id="10_560jd"]
@@ -72,6 +73,7 @@ show_percentage = false
 script = ExtResource("2_netmy")
 
 [node name="NakedMan" type="Sprite2D" parent="canvas_layer"]
+material = ExtResource("7_kkw2e")
 position = Vector2(566, 332)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("10_560jd")
@@ -81,6 +83,7 @@ position = Vector2(211, 146)
 area = NodePath("../MinigameArea2")
 
 [node name="Sprite2D" type="Sprite2D" parent="canvas_layer/octopus_costume_limb2"]
+material = ExtResource("7_kkw2e")
 position = Vector2(-11.425, 0)
 rotation = 4.26908
 scale = Vector2(0.1, 0.1)
@@ -91,6 +94,7 @@ position = Vector2(701, 459)
 area = NodePath("../MinigameArea4")
 
 [node name="Sprite2D" type="Sprite2D" parent="canvas_layer/octopus_costume_limb4"]
+material = ExtResource("7_kkw2e")
 position = Vector2(34.415, 0)
 rotation = -1.57952
 scale = Vector2(0.1, 0.1)
@@ -101,6 +105,7 @@ position = Vector2(343, 462)
 area = NodePath("../MinigameArea3")
 
 [node name="Sprite2D" type="Sprite2D" parent="canvas_layer/octopus_costume_limb3"]
+material = ExtResource("7_kkw2e")
 position = Vector2(-18.18, 0)
 rotation = -1.67552
 scale = Vector2(0.1, 0.1)
@@ -111,6 +116,7 @@ position = Vector2(925, 304)
 area = NodePath("../MinigameArea")
 
 [node name="Sprite2D" type="Sprite2D" parent="canvas_layer/octopus_costume_limb"]
+material = ExtResource("7_kkw2e")
 position = Vector2(-18.18, 0)
 rotation = -1.31598
 scale = Vector2(0.1, 0.1)
@@ -121,6 +127,7 @@ position = Vector2(719, 131)
 area = NodePath("../MinigameArea5")
 
 [node name="Sprite2D" type="Sprite2D" parent="canvas_layer/octopus_costume_limb5"]
+material = ExtResource("7_kkw2e")
 position = Vector2(-4, 0)
 rotation = -1.55509
 scale = Vector2(0.1, 0.1)

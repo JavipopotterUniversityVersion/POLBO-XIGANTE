@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://cl27f3ae3talg"]
 
-[ext_resource type="Script" uid="uid://8hxp7yeh7pgk" path="res://Scripts/CowMinigame.gd" id="1_5oqxu"]
+[ext_resource type="Script" path="res://Scripts/CowMinigame.gd" id="1_5oqxu"]
 [ext_resource type="Script" uid="uid://deq3pqhyfqwj2" path="res://Scripts/MinigameTimer.gd" id="2_4xoit"]
 [ext_resource type="Texture2D" uid="uid://b4tprkou5qai0" path="res://assets/sprites/cabexa pilpo enfadado.png" id="3_60jee"]
 [ext_resource type="Texture2D" uid="uid://drcbdngmgh1fc" path="res://assets/sprites/vaca.png" id="4_itybt"]
 [ext_resource type="Texture2D" uid="uid://bys6upkwjcqmm" path="res://assets/sprites/tentaculo agarrando tío.png" id="5_asvv8"]
-[ext_resource type="Script" uid="uid://c6eak82j7dyip" path="res://Scripts/pull_Zone.gd" id="6_5oqxu"]
+[ext_resource type="Script" path="res://Scripts/pull_Zone.gd" id="6_5oqxu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5oqxu"]
 size = Vector2(45, 122)

@@ -48,5 +48,8 @@ func wawa_sound():
 	if wawaing: return
 	wawaing = true
 	await get_tree().create_timer(0.1).timeout
+	var new_zoom = Camera.cur_zoom.x + 0.01
+	if new_zoom >= 1.2: new_zoom = 1.2
+	Camera.set_zoom_str(new_zoom)
 	wawaing = false
 	AudioManager.play_sound("wawa")

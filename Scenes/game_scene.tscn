@@ -1,9 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://d6143uxlokxe"]
+[gd_scene load_steps=12 format=3 uid="uid://d6143uxlokxe"]
 
 [ext_resource type="PackedScene" uid="uid://ccp0t8scjreyd" path="res://Prefabs/minigame_manager.tscn" id="1_x87qo"]
 [ext_resource type="Script" uid="uid://cdrpbmhvc0s4j" path="res://Scripts/Lives.gd" id="2_b6fju"]
+[ext_resource type="PackedScene" uid="uid://bix8rldx5pd7h" path="res://Scenes/lambada_minigame.tscn" id="4_5dgvu"]
+[ext_resource type="PackedScene" uid="uid://c0ya6sol0b1hh" path="res://Scenes/candles_minigame.tscn" id="4_fiftr"]
+[ext_resource type="PackedScene" uid="uid://xidq3nsyt43u" path="res://Scenes/octopus_costume_minigame.tscn" id="5_1ixah"]
+[ext_resource type="PackedScene" uid="uid://cl27f3ae3talg" path="res://Scenes/cow_minigame.tscn" id="5_uscyt"]
+[ext_resource type="PackedScene" uid="uid://cokr5a7fxspbb" path="res://Scenes/photo_minigame.tscn" id="6_2fmhe"]
 [ext_resource type="PackedScene" uid="uid://tigixn6xylsa" path="res://Scenes/strangle_minigame.tscn" id="6_rgj8m"]
 [ext_resource type="Script" uid="uid://sywvbbyi4res" path="res://Scripts/music_starter.gd" id="7_2fmhe"]
+[ext_resource type="PackedScene" uid="uid://b0r0g60gsn8q1" path="res://Scenes/wake_minigame.tscn" id="9_4xiap"]
 
 [sub_resource type="Environment" id="Environment_6h5vk"]
 
@@ -14,7 +20,7 @@ script = ExtResource("2_b6fju")
 metadata/_custom_type_script = "uid://cdrpbmhvc0s4j"
 
 [node name="MinigameManager" parent="." instance=ExtResource("1_x87qo")]
-all_minigames = Array[PackedScene]([ExtResource("6_rgj8m")])
+all_minigames = Array[PackedScene]([ExtResource("6_rgj8m"), ExtResource("4_5dgvu"), ExtResource("5_uscyt"), ExtResource("4_fiftr"), ExtResource("6_2fmhe"), ExtResource("5_1ixah"), ExtResource("9_4xiap")])
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6h5vk")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bhv2idnl3ow6e"]
+[gd_scene load_steps=18 format=3 uid="uid://bix8rldx5pd7h"]
 
 [ext_resource type="Script" uid="uid://p8ft1du3jieh" path="res://Scripts/CountingMinigame.gd" id="1_wp87x"]
 [ext_resource type="PackedScene" uid="uid://b31ya55b7ttxa" path="res://Prefabs/timer.tscn" id="2_g42vc"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dqa5xttc63uop" path="res://assets/sprites/otramask.jpeg" id="3_vn300"]
 [ext_resource type="Texture2D" uid="uid://dutdnrdc5edim" path="res://assets/sprites/muller_golpeando.jpg" id="4_2ypk1"]
 [ext_resource type="Texture2D" uid="uid://dxnwlfplq1ci6" path="res://assets/sprites/bedroom_copy_free.jpg" id="4_ewlk6"]
-[ext_resource type="Script" uid="uid://bo3fqrr2w6f48" path="res://Scripts/PlayAnimation.gd" id="5_2ypk1"]
+[ext_resource type="Script" path="res://Scripts/PlayAnimation.gd" id="5_2ypk1"]
 [ext_resource type="Texture2D" uid="uid://df7gqjsv6a8a0" path="res://assets/sprites/neno_ledo.jpg" id="6_f7pcs"]
 [ext_resource type="Texture2D" uid="uid://da6dn4inq3tqp" path="res://assets/sprites/neno_triste.png" id="7_2yrhe"]
 [ext_resource type="PackedScene" uid="uid://cp2sgiff8xhpn" path="res://Prefabs/axitar!!.tscn" id="12_ewlk6"]
@@ -124,6 +124,7 @@ idle = "default"
 [node name="Axitar!!" parent="." instance=ExtResource("12_ewlk6")]
 texture = ExtResource("13_cdxd6")
 
+[connection signal="timeout" from="canvas_layer/control/timer" to="." method="finished"]
 [connection signal="clicked" from="Neno" to="." method="freeOne"]
 [connection signal="clicked" from="Neno" to="Criada" method="playAnim"]
 [connection signal="clicked" from="Neno" to="Neno/AnimatedSprite2D" method="playAnim"]

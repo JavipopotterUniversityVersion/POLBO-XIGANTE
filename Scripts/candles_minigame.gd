@@ -1,6 +1,7 @@
 extends Minigame
 @export var candle_nodes:Array[Node2D]
 var candles:Array[Candle]
+signal on_sucess
 
 func _ready() -> void:
 	for candle in candle_nodes:
@@ -24,3 +25,4 @@ func on_turned_off(candle):
 	if candles.size() <= 0:
 		print("Candle Minigame Completed!")
 		succed()
+		on_sucess.emit()

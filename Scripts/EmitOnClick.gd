@@ -21,4 +21,5 @@ func _process(delta: float) -> void:
 	
 	if hovering && Input.is_action_just_pressed("Click") && timer > cooldown:
 		clicked.emit()
+		Camera.shake_camera(1.01,Vector2(35.5,35.5))
 		timer = 0

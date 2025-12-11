@@ -244,6 +244,7 @@ func _process(delta):
 						if remainingTime < psm.FadeOut:
 							newPSM.FadeIn = psm.FadeOut;
 				if (remainingTime < 0):
+					set_song_speed(current_speed)
 					_soundManagers.erase(psm);
 					for id in psm.Ids:
 						psm.MyStream.stop_stream(id);
@@ -255,7 +256,9 @@ func _process(delta):
 				
 		return;
 
+var current_speed:float
 func set_song_speed(speed: float) -> void:
+	current_speed = speed
 	for psm in _soundManagers:
 		for id in psm.Ids:
 			psm.MyStream.set_stream_pitch_scale(id, speed)
