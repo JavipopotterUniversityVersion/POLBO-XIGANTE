@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://xidq3nsyt43u"]
 
 [ext_resource type="Script" uid="uid://p8ft1du3jieh" path="res://Scripts/CountingMinigame.gd" id="1_netmy"]
-[ext_resource type="Shader" path="res://Shaders/shaderDuroDeCojones.gdshader" id="2_88mxi"]
+[ext_resource type="Shader" uid="uid://b2qh22b4xe6l4" path="res://Shaders/shaderDuroDeCojones.gdshader" id="2_88mxi"]
 [ext_resource type="Script" uid="uid://deq3pqhyfqwj2" path="res://Scripts/MinigameTimer.gd" id="2_netmy"]
 [ext_resource type="PackedScene" uid="uid://c5gcm2l8uew4u" path="res://Prefabs/octopus_costume_limb.tscn" id="2_o3arj"]
 [ext_resource type="Texture2D" uid="uid://b45w24r0s4523" path="res://assets/sprites/test_mask.png" id="3_88mxi"]
@@ -26,6 +26,7 @@ shader_parameter/noise = ExtResource("3_88mxi")
 [node name="OctopusCostumeMinigame" type="Node2D"]
 script = ExtResource("1_netmy")
 count = 5
+intensity = 0.3
 
 [node name="canvas_layer" type="CanvasLayer" parent="."]
 

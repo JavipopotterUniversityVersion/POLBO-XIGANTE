@@ -1,10 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://chjstfmwyk42i"]
+[gd_scene load_steps=16 format=3 uid="uid://chjstfmwyk42i"]
 
 [ext_resource type="Script" uid="uid://nyx0urel3ud5" path="res://Scripts/audio_manager.gd" id="1_203tp"]
 [ext_resource type="AudioStream" uid="uid://dlkpgo6gdcjsy" path="res://assets/audioClips/si.wav" id="2_ga8lj"]
 [ext_resource type="AudioStream" uid="uid://cjedtwacnsnbu" path="res://assets/audioClips/no.wav" id="3_rgjcj"]
 [ext_resource type="AudioStream" uid="uid://dt74vdqp21y3n" path="res://assets/audioClips/wawwawa.wav" id="4_rgjcj"]
 [ext_resource type="AudioStream" uid="uid://bxv2wo4dxm1xj" path="res://assets/audioClips/Comedy Sound FX Pack/Circus/Silly Whistle B.wav" id="5_y6pob"]
+[ext_resource type="AudioStream" uid="uid://caw6747mxh6hl" path="res://assets/audioClips/Lets Boogie (RT 6.077)/80s Vol2 Lets Boogie Main.wav" id="6_s84qc"]
+[ext_resource type="Script" uid="uid://kybdqmo6rrvs" path="res://Scripts/OvaniPlugin/OvaniPlayer.gd" id="7_mglm8"]
+[ext_resource type="Script" uid="uid://hu57xoa2ei7t" path="res://Scripts/OvaniPlugin/OvaniSong.gd" id="8_vv6nm"]
+[ext_resource type="AudioStream" uid="uid://dbvlu6qrnjflx" path="res://assets/audioClips/Lets Boogie (RT 6.077)/80s Vol2 Lets Boogie Intensity 1.wav" id="9_34627"]
+[ext_resource type="AudioStream" uid="uid://bodjmyhxw61l3" path="res://assets/audioClips/Lets Boogie (RT 6.077)/80s Vol2 Lets Boogie Intensity 2.wav" id="10_hmsfd"]
+[ext_resource type="AudioStream" uid="uid://br4wle6xr0be5" path="res://assets/audioClips/Lets Boogie (RT 6.077)/80s Vol2 Lets Boogie Cut 30.wav" id="11_737te"]
+[ext_resource type="AudioStream" uid="uid://cjvxwy1q8t2eh" path="res://assets/audioClips/Lets Boogie (RT 6.077)/80s Vol2 Lets Boogie Cut 60.wav" id="12_x4p8m"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_rgjcj"]
 random_pitch = 1.05
@@ -15,6 +22,17 @@ stream_0/stream = ExtResource("4_rgjcj")
 random_pitch = 1.1
 streams_count = 1
 stream_0/stream = ExtResource("5_y6pob")
+
+[sub_resource type="Resource" id="Resource_c4ql3"]
+script = ExtResource("8_vv6nm")
+Intensity1 = ExtResource("9_34627")
+Intensity2 = ExtResource("10_hmsfd")
+Intensity3 = ExtResource("6_s84qc")
+Loop30 = ExtResource("11_737te")
+Loop60 = ExtResource("12_x4p8m")
+ReverbTail = 6.077
+SongMode = 0
+metadata/_custom_type_script = "uid://hu57xoa2ei7t"
 
 [node name="audio_manager" type="Node"]
 script = ExtResource("1_203tp")
@@ -31,3 +49,8 @@ stream = SubResource("AudioStreamRandomizer_rgjcj")
 [node name="whistle" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_s84qc")
 max_polyphony = 5
+
+[node name="boogie" type="Node" parent="."]
+script = ExtResource("7_mglm8")
+QueuedSongs = Array[ExtResource("8_vv6nm")]([SubResource("Resource_c4ql3")])
+metadata/_custom_type_script = "uid://kybdqmo6rrvs"

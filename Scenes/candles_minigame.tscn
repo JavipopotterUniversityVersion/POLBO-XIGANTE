@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b2746cpp60fjp" path="res://Scripts/candles_minigame.gd" id="1_hqba4"]
 [ext_resource type="PackedScene" uid="uid://cax7b2a2eexo7" path="res://Prefabs/CandlesMinigame/candle.tscn" id="1_u1wo2"]
-[ext_resource type="Shader" path="res://Shaders/shaderDuroDeCojones.gdshader" id="2_1hr3p"]
+[ext_resource type="Shader" uid="uid://b2qh22b4xe6l4" path="res://Shaders/shaderDuroDeCojones.gdshader" id="2_1hr3p"]
 [ext_resource type="Texture2D" uid="uid://dg7ef6g1jrce2" path="res://assets/sprites/squares.jpg" id="3_c773h"]
 [ext_resource type="PackedScene" uid="uid://b31ya55b7ttxa" path="res://Prefabs/timer.tscn" id="3_whn5p"]
 [ext_resource type="PackedScene" uid="uid://cp2sgiff8xhpn" path="res://Prefabs/axitar!!.tscn" id="4_7kqor"]
@@ -29,6 +29,7 @@ shader_parameter/seed = 42.0
 [node name="CandlesMinigame" type="Node2D" node_paths=PackedStringArray("candle_nodes")]
 script = ExtResource("1_hqba4")
 candle_nodes = [NodePath("candle"), NodePath("candle2"), NodePath("candle3"), NodePath("candle4"), NodePath("candle5"), NodePath("candle7")]
+intensity = 0.5
 
 [node name="RoomCopyFree" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_rwsfq")

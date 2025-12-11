@@ -35,7 +35,7 @@ func fade():
 	trans_mat.set_shader_parameter(&"mask_texture", current_setting.trans_mask)
 	
 	var tween = get_tree().create_tween();
-	tween.tween_method(set_shader_value, 0, current_setting.final_progress, TRANS_DURATION);
+	await tween.tween_method(set_shader_value, 0, current_setting.final_progress, TRANS_DURATION);
 	
 	if current_anim:
 		animations_container.remove_child(current_anim)

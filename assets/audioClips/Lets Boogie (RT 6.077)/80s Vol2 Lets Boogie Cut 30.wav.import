@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://br4wle6xr0be5"
+path="res://.godot/imported/80s Vol2 Lets Boogie Cut 30.wav-39e20466d4caf0b00cc0228f3b8b0675.sample"
+
+[deps]
+
+source_file="res://assets/audioClips/Lets Boogie (RT 6.077)/80s Vol2 Lets Boogie Cut 30.wav"
+dest_files=["res://.godot/imported/80s Vol2 Lets Boogie Cut 30.wav-39e20466d4caf0b00cc0228f3b8b0675.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

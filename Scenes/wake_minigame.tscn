@@ -22,6 +22,7 @@ shader_parameter/noise = ExtResource("3_e8fv8")
 [node name="WakeMinigame" type="Node2D"]
 script = ExtResource("1_vxaps")
 count = 4
+intensity = 0.7
 
 [node name="VelorioCopyFree" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_mhp7f")

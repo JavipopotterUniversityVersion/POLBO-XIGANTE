@@ -17,6 +17,7 @@ func add_live():
 
 func substract_live():
 	current_lives -= 1
+	current_lives = clamp(0,current_lives,5)
 	update_lives()
 
 func substract_lives(lives:int):
